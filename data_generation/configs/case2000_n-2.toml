@@ -1,0 +1,13 @@
+data_dir = "data"
+case_name = "case2000"
+topology_perturb = "n-2"
+
+delete_intermediate = true
+analysis_mode = false
+
+[matlab]
+# Note: Code has only been tested on this MATLAB version
+# TODO: you need to add info here on which matpower version should be used too.
+# TODO: add note on intel matlab only for mac
+# TODO: add note to leave empty on cluster
+home = "/Applications/MATLAB_R2024b.app"

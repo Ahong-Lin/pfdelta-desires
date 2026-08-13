@@ -1,0 +1,56 @@
+config_type: experiment
+dataset:
+  datasets:
+  - add_bus_type: true
+    case_name: case30
+    model: CANOS
+    name: pfdeltaRhoCANOS
+    root_dir: data_generation_rho/case30/rho_pf_scaling_endpoint_8k
+    split: train
+    task: case30_endpoint_scaling_v1
+  - add_bus_type: true
+    case_name: case30
+    model: CANOS
+    name: pfdeltaRhoCANOS
+    root_dir: data_generation_rho/case30/rho_pf_scaling_endpoint_8k
+    split: val
+    task: case30_endpoint_scaling_v1
+functional:
+  run_location: canos_case30_rho_scaling_endpoint_8k
+  run_name: canos_case30_rho_scaling_endpoint_8k_ep300
+  is_debug: false
+  seed: 11
+  cpu: false
+  trainer_name: gnn_trainer
+model:
+  dataset: _include_
+  hidden_dim: 128
+  include_sent_messages: true
+  k_steps: 20
+  name: canos_pf
+optim:
+  lr_scheduler:
+    milestones:
+    - 5
+    name: SequentialLR
+    schedulers:
+    - end_factor: 1
+      name: LinearLR
+      start_factor: 0.01
+    - gamma: 0.9
+      name: StepLR
+      step_size: 4
+  optimizer:
+    lr: 0.0005
+    name: Adam
+    weight_decay: 0.0
+  train_params:
+    batch_size: 64
+    epochs: 300
+    train_loss:
+    - name: canos_pf_mse
+  val_params:
+    batch_size: 64
+    report_every: 2
+    val_loss:
+    - name: canos_pf_mse

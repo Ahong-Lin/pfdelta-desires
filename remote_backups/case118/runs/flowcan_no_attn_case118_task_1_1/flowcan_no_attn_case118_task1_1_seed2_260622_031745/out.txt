@@ -1,0 +1,3896 @@
+📑 Console output is now being recorded!
+
+📑 Config being used: flowcan_no_attn_case118_task_1_1
+📑 Current working directory is not a git repository; skipping commit hash capture.
+📑 Device being used: cuda
+Downloading files for task 1.1...
+Shuffle files already exist. Skipping download.
+case118 data already exists. Skipping download.
+Loading train dataset from data/pfdelta_data/processed/combined_task_1.1_CANOS_case118/train.pt
+Downloading files for task 1.1...
+Shuffle files already exist. Skipping download.
+case118 data already exists. Skipping download.
+Loading val dataset from data/pfdelta_data/processed/combined_task_1.1_CANOS_case118/val.pt
+
+Datasets loaded! ✅
+Models loaded! ✅
+Optimizer loaded! ✅
+Loss function loaded! ✅
+
+📑 Number of trainable parameters: 9560710
+
+Trainer initialized!✔
+Starting training...
+
+
+
+Epoch 1/200 done!🦾 Train step: 760
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 108.56504210108204
+PBL Mean: 4.551304382870072
+
+Max GPU memory reserved: 1.9GB
+
+
+Current GPU memory reserved: 1.9GB
+
+
+
+Epoch 2/200 done!🦾 Train step: 1520
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 8.721641365477913
+PBL Mean: 1.405276233428403
+
+Max GPU memory reserved: 1.9GB
+
+
+Current GPU memory reserved: 1.9GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 15.81684248307172
+PBL Mean: 1.5819067997090956
+Inference speed (per batch): 0.03737458005985793
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 3/200 done!🦾 Train step: 2280
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 7.3720563474454375
+PBL Mean: 1.3923187481729609
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 4/200 done!🦾 Train step: 3040
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 5.23334706613892
+PBL Mean: 1.2935117117668453
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 3.7317870083977196
+PBL Mean: 1.2366409175536213
+Inference speed (per batch): 0.03782131468247184
+
+NEW BEST VAL ERROR 3.73 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 5/200 done!🦾 Train step: 3800
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 2.782074353961568
+PBL Mean: 1.029248334467411
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 6/200 done!🦾 Train step: 4560
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 2.6613246028360567
+PBL Mean: 0.9956674029952601
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 1.1097452836878159
+PBL Mean: 0.6834468189407797
+Inference speed (per batch): 0.028086132630157995
+
+NEW BEST VAL ERROR 1.11 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 7/200 done!🦾 Train step: 5320
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 1.1966735028906872
+PBL Mean: 0.7405896410346031
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 8/200 done!🦾 Train step: 6080
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.981112169788072
+PBL Mean: 0.7054888648422141
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.902097645927878
+PBL Mean: 0.6904263454325059
+Inference speed (per batch): 0.02799373730633627
+
+NEW BEST VAL ERROR 0.902 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 9/200 done!🦾 Train step: 6840
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.9098362668956581
+PBL Mean: 0.66038459994291
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 10/200 done!🦾 Train step: 7600
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.6309342811766424
+PBL Mean: 0.5577283983167849
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.6801000738845152
+PBL Mean: 0.425981989327599
+Inference speed (per batch): 0.03697571018984651
+
+NEW BEST VAL ERROR 0.68 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 11/200 done!🦾 Train step: 8360
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.698993151870213
+PBL Mean: 0.5951186623620359
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 12/200 done!🦾 Train step: 9120
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.6680776546268087
+PBL Mean: 0.5919232432387377
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.44559281678760754
+PBL Mean: 0.4251509428024292
+Inference speed (per batch): 0.029019992888959893
+
+NEW BEST VAL ERROR 0.446 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 13/200 done!🦾 Train step: 9880
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.5590403965429256
+PBL Mean: 0.5303198039923843
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 14/200 done!🦾 Train step: 10640
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.5150220111012459
+PBL Mean: 0.5025524731921522
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.37958175014047063
+PBL Mean: 0.4302489862722509
+Inference speed (per batch): 0.028985223824651365
+
+NEW BEST VAL ERROR 0.38 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 15/200 done!🦾 Train step: 11400
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 2.295548644152127
+PBL Mean: 0.6473157574471674
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 16/200 done!🦾 Train step: 12160
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 10.30025174492284
+PBL Mean: 1.189989756596716
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 9.834964499754065
+PBL Mean: 1.179775224012487
+Inference speed (per batch): 0.02911474055966691
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 17/200 done!🦾 Train step: 12920
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 10.143821666115208
+PBL Mean: 1.2532752923275294
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 18/200 done!🦾 Train step: 13680
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 8.900169357500578
+PBL Mean: 1.4475777754658148
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 8.203749202279484
+PBL Mean: 1.3221314219867482
+Inference speed (per batch): 0.028569793161552618
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 19/200 done!🦾 Train step: 14440
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 8.49332865100158
+PBL Mean: 1.406555419376022
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 20/200 done!🦾 Train step: 15200
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 8.121307243171492
+PBL Mean: 1.4845870849333311
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 6.81576291252585
+PBL Mean: 1.5692726570017197
+Inference speed (per batch): 0.028738102582557237
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 21/200 done!🦾 Train step: 15960
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 7.573412078932712
+PBL Mean: 1.519800603860303
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 22/200 done!🦾 Train step: 16720
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 7.148875948316173
+PBL Mean: 1.5274307611741518
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 6.9848533798666566
+PBL Mean: 1.2092886854620541
+Inference speed (per batch): 0.02849991007379311
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 23/200 done!🦾 Train step: 17480
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 6.890864751840892
+PBL Mean: 1.4334942798865469
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 24/200 done!🦾 Train step: 18240
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 6.848267728090287
+PBL Mean: 1.4265577586073623
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 6.3655799192540785
+PBL Mean: 1.3386826220680685
+Inference speed (per batch): 0.02860205310451634
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 25/200 done!🦾 Train step: 19000
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 3.852296911572155
+PBL Mean: 1.1486283025459239
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 26/200 done!🦾 Train step: 19760
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 2.3025490196127643
+PBL Mean: 0.8904670836109864
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 1.849980323454913
+PBL Mean: 0.8597859768306508
+Inference speed (per batch): 0.028200866103939275
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 27/200 done!🦾 Train step: 20520
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 1.843745369189664
+PBL Mean: 0.8000234829752069
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 28/200 done!🦾 Train step: 21280
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 1.4665757391013596
+PBL Mean: 0.7115291175873656
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 1.1827899589258082
+PBL Mean: 0.6297621958396014
+Inference speed (per batch): 0.028472981751239038
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 29/200 done!🦾 Train step: 22040
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 1.1627655030865418
+PBL Mean: 0.6272246391757539
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 30/200 done!🦾 Train step: 22800
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.9137286405814321
+PBL Mean: 0.5627044986737402
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 1.013280884658589
+PBL Mean: 0.5160968226544997
+Inference speed (per batch): 0.029059506140594535
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 31/200 done!🦾 Train step: 23560
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.7961850876086637
+PBL Mean: 0.5249293578690604
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 32/200 done!🦾 Train step: 24320
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.6948012087298067
+PBL Mean: 0.4851022085076884
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 1.2050028387237997
+PBL Mean: 0.4560488125857185
+Inference speed (per batch): 0.02872802394113558
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 33/200 done!🦾 Train step: 25080
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.6180095235768117
+PBL Mean: 0.46531323347436754
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 34/200 done!🦾 Train step: 25840
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.5100739355150022
+PBL Mean: 0.40232270661937564
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.47042142187847813
+PBL Mean: 0.41662853465360755
+Inference speed (per batch): 0.02888627976370866
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 35/200 done!🦾 Train step: 26600
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.4690094852133801
+PBL Mean: 0.39735402323697744
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 36/200 done!🦾 Train step: 27360
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.43484970295899794
+PBL Mean: 0.37285180385959776
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.3554648206514471
+PBL Mean: 0.31114478637190424
+Inference speed (per batch): 0.028818068367100377
+
+NEW BEST VAL ERROR 0.355 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 37/200 done!🦾 Train step: 28120
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.41708507980955273
+PBL Mean: 0.3631416745483875
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 38/200 done!🦾 Train step: 28880
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.3551963812230449
+PBL Mean: 0.334964530718954
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.4263931435697219
+PBL Mean: 0.426486574902254
+Inference speed (per batch): 0.028889426339746397
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 39/200 done!🦾 Train step: 29640
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.3432861718104074
+PBL Mean: 0.33303582787905867
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 40/200 done!🦾 Train step: 30400
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.3285321884053318
+PBL Mean: 0.31938145801817114
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.3458329037708395
+PBL Mean: 0.29107421846950754
+Inference speed (per batch): 0.028837408449993853
+
+NEW BEST VAL ERROR 0.346 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 41/200 done!🦾 Train step: 31160
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.3138952751104769
+PBL Mean: 0.3093120574951172
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 42/200 done!🦾 Train step: 31920
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.2742863806650827
+PBL Mean: 0.2849838174879551
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.2931373657549129
+PBL Mean: 0.2961604935281417
+Inference speed (per batch): 0.037189180199878616
+
+NEW BEST VAL ERROR 0.293 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 43/200 done!🦾 Train step: 32680
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.26559424147401983
+PBL Mean: 0.2865370477500715
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 44/200 done!🦾 Train step: 33440
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.26068992046149153
+PBL Mean: 0.2786728379169577
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.2657215954626308
+PBL Mean: 0.2398783068446552
+Inference speed (per batch): 0.02824691887534059
+
+NEW BEST VAL ERROR 0.266 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 45/200 done!🦾 Train step: 34200
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.24938895720008172
+PBL Mean: 0.2717324040830135
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 46/200 done!🦾 Train step: 34960
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.2089592848561312
+PBL Mean: 0.2453269600868225
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.22421341170282924
+PBL Mean: 0.22064235823995926
+Inference speed (per batch): 0.028396693061051123
+
+NEW BEST VAL ERROR 0.224 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 47/200 done!🦾 Train step: 35720
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.2091495339807711
+PBL Mean: 0.250030726076741
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 48/200 done!🦾 Train step: 36480
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.1953866880387068
+PBL Mean: 0.2416924901894833
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.2717035107752856
+PBL Mean: 0.23899112186011146
+Inference speed (per batch): 0.028611779486870065
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 49/200 done!🦾 Train step: 37240
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.19094897821349532
+PBL Mean: 0.23805120987327474
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 50/200 done!🦾 Train step: 38000
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.1703431809124978
+PBL Mean: 0.22181760460922592
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.16280207160641166
+PBL Mean: 0.2071114298175363
+Inference speed (per batch): 0.028430722968871978
+
+NEW BEST VAL ERROR 0.163 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 51/200 done!🦾 Train step: 38760
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.16199103607551046
+PBL Mean: 0.21924600483555542
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 52/200 done!🦾 Train step: 39520
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.182411019249182
+PBL Mean: 0.22948511644805733
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.296658228951342
+PBL Mean: 0.2778663523056928
+Inference speed (per batch): 0.028263631938299272
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 53/200 done!🦾 Train step: 40280
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.16188069760407273
+PBL Mean: 0.21675055989701497
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 54/200 done!🦾 Train step: 41040
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.13384439314862615
+PBL Mean: 0.1943042000461566
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.12421117424964905
+PBL Mean: 0.16837645208134372
+Inference speed (per batch): 0.028547188727294698
+
+NEW BEST VAL ERROR 0.124 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 55/200 done!🦾 Train step: 41800
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.13488053428499322
+PBL Mean: 0.20226941763570433
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 56/200 done!🦾 Train step: 42560
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.12334157250037318
+PBL Mean: 0.19054701385137282
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.16382406827281504
+PBL Mean: 0.2091541109716191
+Inference speed (per batch): 0.028291002851363052
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 57/200 done!🦾 Train step: 43320
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.12722716837337142
+PBL Mean: 0.19446490450124992
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 58/200 done!🦾 Train step: 44080
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.11072648222509184
+PBL Mean: 0.1823856403364947
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.10589847354327932
+PBL Mean: 0.15745825855170978
+Inference speed (per batch): 0.028472033167696174
+
+NEW BEST VAL ERROR 0.106 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 59/200 done!🦾 Train step: 44840
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.10566205570572301
+PBL Mean: 0.17549047252457392
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 60/200 done!🦾 Train step: 45600
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.10976098479801102
+PBL Mean: 0.18052107066308198
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.09819809873314465
+PBL Mean: 0.16867118267452016
+Inference speed (per batch): 0.02823973545421134
+
+NEW BEST VAL ERROR 0.0982 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 61/200 done!🦾 Train step: 46360
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.10248907779980647
+PBL Mean: 0.17487772030657844
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 62/200 done!🦾 Train step: 47120
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.09751090161306293
+PBL Mean: 0.16165773226438385
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.10338236514259787
+PBL Mean: 0.15467564165592193
+Inference speed (per batch): 0.029871831632986227
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 63/200 done!🦾 Train step: 47880
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.09528053048507948
+PBL Mean: 0.16998112269334104
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 64/200 done!🦾 Train step: 48640
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.08774192664086035
+PBL Mean: 0.15317470691117802
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.10932667325524723
+PBL Mean: 0.1446535042103599
+Inference speed (per batch): 0.03919650186811957
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 65/200 done!🦾 Train step: 49400
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.08563563619299154
+PBL Mean: 0.15251853750332406
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 66/200 done!🦾 Train step: 50160
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.07749838534938662
+PBL Mean: 0.14736592441209054
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.11282875607995425
+PBL Mean: 0.2104776713777991
+Inference speed (per batch): 0.028559946838547203
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 67/200 done!🦾 Train step: 50920
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.08031641448308763
+PBL Mean: 0.1495585320125285
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 68/200 done!🦾 Train step: 51680
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.07614310660742615
+PBL Mean: 0.14763339225594935
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.0844312046380604
+PBL Mean: 0.13843678639215581
+Inference speed (per batch): 0.02887962947544806
+
+NEW BEST VAL ERROR 0.0844 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 69/200 done!🦾 Train step: 52440
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.07238986977915231
+PBL Mean: 0.13917099484487583
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 70/200 done!🦾 Train step: 53200
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.06546676848083735
+PBL Mean: 0.1317610966237752
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.08186268547878546
+PBL Mean: 0.14182150258737453
+Inference speed (per batch): 0.03792820247438024
+
+NEW BEST VAL ERROR 0.0819 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 71/200 done!🦾 Train step: 53960
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.06657971516251564
+PBL Mean: 0.1351466908462738
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 72/200 done!🦾 Train step: 54720
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.06592447069522582
+PBL Mean: 0.13086217916325518
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.09637738597743652
+PBL Mean: 0.1700987358303631
+Inference speed (per batch): 0.0282068504308186
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 73/200 done!🦾 Train step: 55480
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.06643662348781762
+PBL Mean: 0.13128881145660815
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 74/200 done!🦾 Train step: 56240
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.0580175359145199
+PBL Mean: 0.12177470937175186
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.08941781932816786
+PBL Mean: 0.11056020952322904
+Inference speed (per batch): 0.028484383066568305
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 75/200 done!🦾 Train step: 57000
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.059889836682889025
+PBL Mean: 0.12402095723112946
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 76/200 done!🦾 Train step: 57760
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.05812434030108546
+PBL Mean: 0.12346060234857233
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.07506292997037663
+PBL Mean: 0.15736053480821496
+Inference speed (per batch): 0.028233323598225765
+
+NEW BEST VAL ERROR 0.0751 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 77/200 done!🦾 Train step: 58520
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.053213170278621345
+PBL Mean: 0.11675943388162476
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 78/200 done!🦾 Train step: 59280
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.052657050732523206
+PBL Mean: 0.11540121752768755
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.054834398320492576
+PBL Mean: 0.10406095797524732
+Inference speed (per batch): 0.02829758265904863
+
+NEW BEST VAL ERROR 0.0548 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 79/200 done!🦾 Train step: 60040
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.05078181487164999
+PBL Mean: 0.11123443639984257
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 80/200 done!🦾 Train step: 60800
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.052347709414990326
+PBL Mean: 0.11427405105021439
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.06656545536483036
+PBL Mean: 0.11496541394906885
+Inference speed (per batch): 0.028431417335591774
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 81/200 done!🦾 Train step: 61560
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.0496752814879935
+PBL Mean: 0.11253334598517732
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 82/200 done!🦾 Train step: 62320
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.044888004596884315
+PBL Mean: 0.10203455971848023
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.052132555141168484
+PBL Mean: 0.10364816635847092
+Inference speed (per batch): 0.028507175308871358
+
+NEW BEST VAL ERROR 0.0521 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 83/200 done!🦾 Train step: 63080
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.04578263831667994
+PBL Mean: 0.10607168082343904
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 84/200 done!🦾 Train step: 63840
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.044537293317874795
+PBL Mean: 0.10098915502036873
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.06007943517144988
+PBL Mean: 0.09884824393426671
+Inference speed (per batch): 0.02887021190733375
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 85/200 done!🦾 Train step: 64600
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.04448820571905296
+PBL Mean: 0.10459522622588434
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 86/200 done!🦾 Train step: 65360
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.039937258041218705
+PBL Mean: 0.09447911347409613
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.07280275747179984
+PBL Mean: 0.10558358316912371
+Inference speed (per batch): 0.02822511694257093
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 87/200 done!🦾 Train step: 66120
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.041844459488301684
+PBL Mean: 0.09957465950007502
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 88/200 done!🦾 Train step: 66880
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.04055777567340747
+PBL Mean: 0.09580843542751513
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.043647715011063744
+PBL Mean: 0.08712815370629816
+Inference speed (per batch): 0.02857409944648252
+
+NEW BEST VAL ERROR 0.0436 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 89/200 done!🦾 Train step: 67640
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.038577337403732696
+PBL Mean: 0.09306096401261656
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 90/200 done!🦾 Train step: 68400
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.03611037361827728
+PBL Mean: 0.08881957363337278
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.04662446480463533
+PBL Mean: 0.09331971599775202
+Inference speed (per batch): 0.03589805310920757
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 91/200 done!🦾 Train step: 69160
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.03683424352325107
+PBL Mean: 0.09126830123560993
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 92/200 done!🦾 Train step: 69920
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.036330651521290606
+PBL Mean: 0.08921382307614151
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.058596692453412445
+PBL Mean: 0.09420640845509136
+Inference speed (per batch): 0.03540906565647353
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 93/200 done!🦾 Train step: 70680
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.037152144714797795
+PBL Mean: 0.09289622389172253
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 94/200 done!🦾 Train step: 71440
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.03446766513056661
+PBL Mean: 0.0850569663863433
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.04013173908871763
+PBL Mean: 0.08157178224886165
+Inference speed (per batch): 0.036056257617276384
+
+NEW BEST VAL ERROR 0.0401 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 95/200 done!🦾 Train step: 72200
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.032242539071625
+PBL Mean: 0.08374937012007362
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 96/200 done!🦾 Train step: 72960
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.03189069721602688
+PBL Mean: 0.08313909861210146
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.05999888186069096
+PBL Mean: 0.11456686232019873
+Inference speed (per batch): 0.03762375291245168
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 97/200 done!🦾 Train step: 73720
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.03311508829999519
+PBL Mean: 0.08599362862541488
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 98/200 done!🦾 Train step: 74480
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.030719722069701867
+PBL Mean: 0.08013558440694683
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.03927851117709104
+PBL Mean: 0.07677799042533426
+Inference speed (per batch): 0.02924098128124195
+
+NEW BEST VAL ERROR 0.0393 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 99/200 done!🦾 Train step: 75240
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.032293195211279546
+PBL Mean: 0.08484214102163126
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 100/200 done!🦾 Train step: 76000
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.029825385049671718
+PBL Mean: 0.07812872552557995
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.03605727198369363
+PBL Mean: 0.07517160913523506
+Inference speed (per batch): 0.0283944845021538
+
+NEW BEST VAL ERROR 0.0361 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 101/200 done!🦾 Train step: 76760
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.0295798641825585
+PBL Mean: 0.07949746060920389
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 102/200 done!🦾 Train step: 77520
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.028567335117412242
+PBL Mean: 0.0762584453840789
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.035910175828372734
+PBL Mean: 0.07482241225593231
+Inference speed (per batch): 0.03784425239051309
+
+NEW BEST VAL ERROR 0.0359 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 103/200 done!🦾 Train step: 78280
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.02728560434801406
+PBL Mean: 0.07488012327567527
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 104/200 done!🦾 Train step: 79040
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.02923897459955984
+PBL Mean: 0.07815448827061214
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.03347989498254131
+PBL Mean: 0.0724775608848123
+Inference speed (per batch): 0.028874341102645678
+
+NEW BEST VAL ERROR 0.0335 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 105/200 done!🦾 Train step: 79800
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.027792224643359842
+PBL Mean: 0.07505205225591596
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 106/200 done!🦾 Train step: 80560
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.025963376565395217
+PBL Mean: 0.07168308272467631
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.03290295160430319
+PBL Mean: 0.0705678022959653
+Inference speed (per batch): 0.037771652013008646
+
+NEW BEST VAL ERROR 0.0329 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 107/200 done!🦾 Train step: 81320
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.026526477227085517
+PBL Mean: 0.07371156381345109
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 108/200 done!🦾 Train step: 82080
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.02640570692570978
+PBL Mean: 0.07383014598959371
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.03221214652499732
+PBL Mean: 0.06962704939000747
+Inference speed (per batch): 0.03652837449438213
+
+NEW BEST VAL ERROR 0.0322 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 109/200 done!🦾 Train step: 82840
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.02626401975652889
+PBL Mean: 0.07371562116436269
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 110/200 done!🦾 Train step: 83600
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.02413576050710521
+PBL Mean: 0.06876840821320289
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.032332035438979376
+PBL Mean: 0.06673607791171354
+Inference speed (per batch): 0.03705498869119979
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 111/200 done!🦾 Train step: 84360
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.025380645481575478
+PBL Mean: 0.07008880661604436
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 112/200 done!🦾 Train step: 85120
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.024915606447642572
+PBL Mean: 0.0688910497254447
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.0327039052020101
+PBL Mean: 0.06989558768623015
+Inference speed (per batch): 0.037028982683413605
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 113/200 done!🦾 Train step: 85880
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.023675304129229566
+PBL Mean: 0.06849498988962487
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 114/200 done!🦾 Train step: 86640
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.023066057919181492
+PBL Mean: 0.06766991437853952
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.031889149239834616
+PBL Mean: 0.06820222910712748
+Inference speed (per batch): 0.037324270018485976
+
+NEW BEST VAL ERROR 0.0319 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 115/200 done!🦾 Train step: 87400
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.023032169911618296
+PBL Mean: 0.06640188125403304
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 116/200 done!🦾 Train step: 88160
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.022824356327519606
+PBL Mean: 0.06640362041561228
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.03206533964942483
+PBL Mean: 0.07256057148470599
+Inference speed (per batch): 0.02874886007322108
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 117/200 done!🦾 Train step: 88920
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.02311480521273456
+PBL Mean: 0.06644404892270503
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 118/200 done!🦾 Train step: 89680
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.021329576752491686
+PBL Mean: 0.06344252932620675
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.02999735038508387
+PBL Mean: 0.06801766551592771
+Inference speed (per batch): 0.0288800522164606
+
+NEW BEST VAL ERROR 0.03 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 119/200 done!🦾 Train step: 90440
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.021931528028002696
+PBL Mean: 0.06418653579036657
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 120/200 done!🦾 Train step: 91200
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.022013707037426923
+PBL Mean: 0.0643092098498815
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.029738044651115642
+PBL Mean: 0.06281532583867802
+Inference speed (per batch): 0.02865268829114297
+
+NEW BEST VAL ERROR 0.0297 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 121/200 done!🦾 Train step: 91960
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.021353161156079485
+PBL Mean: 0.06327582070800035
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 122/200 done!🦾 Train step: 92720
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.02052911847192598
+PBL Mean: 0.06169424424634168
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.029276653883211753
+PBL Mean: 0.06528152880423209
+Inference speed (per batch): 0.028482117486076756
+
+NEW BEST VAL ERROR 0.0293 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 123/200 done!🦾 Train step: 93480
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.020891796277934
+PBL Mean: 0.06210187790719302
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 124/200 done!🦾 Train step: 94240
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.02058050237645052
+PBL Mean: 0.06184358188490334
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.02837156795841806
+PBL Mean: 0.06031087658861104
+Inference speed (per batch): 0.0283576361300862
+
+NEW BEST VAL ERROR 0.0284 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 125/200 done!🦾 Train step: 95000
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.020377963837726335
+PBL Mean: 0.06130547018133496
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 126/200 done!🦾 Train step: 95760
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.019830574776585164
+PBL Mean: 0.06060323249058504
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.027550504181314918
+PBL Mean: 0.058972461390144684
+Inference speed (per batch): 0.028380758790573214
+
+NEW BEST VAL ERROR 0.0276 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 127/200 done!🦾 Train step: 96520
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.019449246066965555
+PBL Mean: 0.059732667121448015
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 128/200 done!🦾 Train step: 97280
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.01963810745724722
+PBL Mean: 0.05982704297884515
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.027564226704485276
+PBL Mean: 0.059742602530647726
+Inference speed (per batch): 0.02867790721630787
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 129/200 done!🦾 Train step: 98040
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.019724423836573565
+PBL Mean: 0.0597145691955168
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 130/200 done!🦾 Train step: 98800
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.018846482316669272
+PBL Mean: 0.058266272817395236
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.027955664935357432
+PBL Mean: 0.06262175778255744
+Inference speed (per batch): 0.028859245763434207
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 131/200 done!🦾 Train step: 99560
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.018912895738245235
+PBL Mean: 0.058648538265965486
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 132/200 done!🦾 Train step: 100320
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.018770891154724124
+PBL Mean: 0.05804497813805938
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.02575099549311049
+PBL Mean: 0.05870227037983782
+Inference speed (per batch): 0.03729416926336639
+
+NEW BEST VAL ERROR 0.0258 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 133/200 done!🦾 Train step: 101080
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.018415682885403697
+PBL Mean: 0.05765240175257388
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 134/200 done!🦾 Train step: 101840
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.01830322296162577
+PBL Mean: 0.05713591738849094
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.02589176847215961
+PBL Mean: 0.058705174221712
+Inference speed (per batch): 0.03661410432199345
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 135/200 done!🦾 Train step: 102600
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.01838077238981465
+PBL Mean: 0.057308169763143124
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 136/200 done!🦾 Train step: 103360
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.017982636798957462
+PBL Mean: 0.05641247076717647
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.025235500164768276
+PBL Mean: 0.0562988586285535
+Inference speed (per batch): 0.038181065435192604
+
+NEW BEST VAL ERROR 0.0252 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 137/200 done!🦾 Train step: 104120
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.01809212923613622
+PBL Mean: 0.057070590482142414
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 138/200 done!🦾 Train step: 104880
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.01745193289641879
+PBL Mean: 0.055356172334991
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.024252693333169994
+PBL Mean: 0.05586620166021235
+Inference speed (per batch): 0.037119678987244914
+
+NEW BEST VAL ERROR 0.0243 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 139/200 done!🦾 Train step: 105640
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.017621100665756353
+PBL Mean: 0.05571471353208548
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 140/200 done!🦾 Train step: 106400
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.017576446648883193
+PBL Mean: 0.05536548435001781
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.02427063643494073
+PBL Mean: 0.05540417253094561
+Inference speed (per batch): 0.028346368321217598
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 141/200 done!🦾 Train step: 107160
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.017565981737387024
+PBL Mean: 0.05536760687828064
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 142/200 done!🦾 Train step: 107920
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.017083687945514132
+PBL Mean: 0.054400336855140174
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.02446475362076479
+PBL Mean: 0.05579962861888549
+Inference speed (per batch): 0.02848484542713884
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 143/200 done!🦾 Train step: 108680
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.01685548383301418
+PBL Mean: 0.05418584998697042
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 144/200 done!🦾 Train step: 109440
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.01714087769658746
+PBL Mean: 0.054538811620716984
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.024563892602043995
+PBL Mean: 0.05441828089601854
+Inference speed (per batch): 0.0282439961015959
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 145/200 done!🦾 Train step: 110200
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.016749832199543322
+PBL Mean: 0.053857278882672915
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 146/200 done!🦾 Train step: 110960
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.016496832587903267
+PBL Mean: 0.05336632141843438
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.02383805905633113
+PBL Mean: 0.054195237159729
+Inference speed (per batch): 0.028294134668677168
+
+NEW BEST VAL ERROR 0.0238 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 147/200 done!🦾 Train step: 111720
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.016463748717337454
+PBL Mean: 0.05331030651240757
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 148/200 done!🦾 Train step: 112480
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.01648328864187198
+PBL Mean: 0.0534557819562523
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.023250684185939677
+PBL Mean: 0.05380179829457227
+Inference speed (per batch): 0.02834221163408502
+
+NEW BEST VAL ERROR 0.0233 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 149/200 done!🦾 Train step: 113240
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.016465374050465855
+PBL Mean: 0.053063841085684925
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 150/200 done!🦾 Train step: 114000
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.016120896259273744
+PBL Mean: 0.0524860715150441
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.02300459343720885
+PBL Mean: 0.052964597896618004
+Inference speed (per batch): 0.028393657835583914
+
+NEW BEST VAL ERROR 0.023 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 151/200 done!🦾 Train step: 114760
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.016098392012185957
+PBL Mean: 0.052386103874366534
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 152/200 done!🦾 Train step: 115520
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.015983434223667964
+PBL Mean: 0.052146366253299145
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.02272271579679321
+PBL Mean: 0.05231042210670078
+Inference speed (per batch): 0.028517443552503692
+
+NEW BEST VAL ERROR 0.0227 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 153/200 done!🦾 Train step: 116280
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.016119922152230223
+PBL Mean: 0.052262832591996385
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 154/200 done!🦾 Train step: 117040
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.015563990548253059
+PBL Mean: 0.05140838886268045
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.023028705663540785
+PBL Mean: 0.05235099441864911
+Inference speed (per batch): 0.029350117383086505
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 155/200 done!🦾 Train step: 117800
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.015704763641482905
+PBL Mean: 0.051552141104873855
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 156/200 done!🦾 Train step: 118560
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.015610580370565386
+PBL Mean: 0.051370691782549806
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.023142831509604174
+PBL Mean: 0.05258657542221686
+Inference speed (per batch): 0.028436384293908143
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 157/200 done!🦾 Train step: 119320
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.01571548531738747
+PBL Mean: 0.051410610081725996
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 158/200 done!🦾 Train step: 120080
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.015268252803453881
+PBL Mean: 0.05072111872662055
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.022327577015932867
+PBL Mean: 0.051750276281553154
+Inference speed (per batch): 0.028769217349369738
+
+NEW BEST VAL ERROR 0.0223 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 159/200 done!🦾 Train step: 120840
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.015414786998084502
+PBL Mean: 0.050737237940101244
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 160/200 done!🦾 Train step: 121600
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.015311408736497948
+PBL Mean: 0.05058351252718191
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.022634328781243634
+PBL Mean: 0.050829441933070915
+Inference speed (per batch): 0.02848083258825628
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 161/200 done!🦾 Train step: 122360
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.015207928087023136
+PBL Mean: 0.05043710666757665
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 162/200 done!🦾 Train step: 123120
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.015101918965382011
+PBL Mean: 0.050182764389012986
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.022264634554877
+PBL Mean: 0.05142973293276394
+Inference speed (per batch): 0.028704562092966894
+
+NEW BEST VAL ERROR 0.0223 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 163/200 done!🦾 Train step: 123880
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.014942871768174595
+PBL Mean: 0.049972805160244826
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 164/200 done!🦾 Train step: 124640
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.014955728683669709
+PBL Mean: 0.04988943209969684
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.021716758236289026
+PBL Mean: 0.05063409651903545
+Inference speed (per batch): 0.028797124101616004
+
+NEW BEST VAL ERROR 0.0217 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 165/200 done!🦾 Train step: 125400
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.014973914296072173
+PBL Mean: 0.04992482138209437
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 166/200 done!🦾 Train step: 126160
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.014797416650445053
+PBL Mean: 0.04940743512523017
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.022811373323202135
+PBL Mean: 0.05152926348588046
+Inference speed (per batch): 0.028730298266472186
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 167/200 done!🦾 Train step: 126920
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.014766357522948009
+PBL Mean: 0.049369125533849
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 168/200 done!🦾 Train step: 127680
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.01477421108437212
+PBL Mean: 0.04940183219058733
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.02187824343495509
+PBL Mean: 0.051122763928245094
+Inference speed (per batch): 0.029204166857251787
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 169/200 done!🦾 Train step: 128440
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.014643103963891534
+PBL Mean: 0.049107940308749674
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 170/200 done!🦾 Train step: 129200
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.014545273438929335
+PBL Mean: 0.048903345012743224
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.021887434799881544
+PBL Mean: 0.05005041325793547
+Inference speed (per batch): 0.028389068016344134
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 171/200 done!🦾 Train step: 129960
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.014531856452997186
+PBL Mean: 0.04884099973561733
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 172/200 done!🦾 Train step: 130720
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.014466777695097813
+PBL Mean: 0.04872393071357357
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.021168024323004134
+PBL Mean: 0.04949296730406144
+Inference speed (per batch): 0.028324996767675175
+
+NEW BEST VAL ERROR 0.0212 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 173/200 done!🦾 Train step: 131480
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.014453118642498004
+PBL Mean: 0.04864696734829953
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 174/200 done!🦾 Train step: 132240
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.01438988439714242
+PBL Mean: 0.04847454041928837
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.021174774844856824
+PBL Mean: 0.04943654261091176
+Inference speed (per batch): 0.03878877088564503
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 175/200 done!🦾 Train step: 133000
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.014253797808564023
+PBL Mean: 0.04827657541946361
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 176/200 done!🦾 Train step: 133760
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.014337586938697649
+PBL Mean: 0.048300278951462945
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.021225535102626855
+PBL Mean: 0.05044183617129045
+Inference speed (per batch): 0.03856376010705443
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 177/200 done!🦾 Train step: 134520
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.014279187641008512
+PBL Mean: 0.04818575599377877
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 178/200 done!🦾 Train step: 135280
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.014104405138641595
+PBL Mean: 0.04789935444530688
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.020813249325489298
+PBL Mean: 0.04882140050039572
+Inference speed (per batch): 0.029366586134111618
+
+NEW BEST VAL ERROR 0.0208 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 179/200 done!🦾 Train step: 136040
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.014070125419254365
+PBL Mean: 0.047849529035585495
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 180/200 done!🦾 Train step: 136800
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.014097136440441797
+PBL Mean: 0.04781248650366538
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.02134340646512368
+PBL Mean: 0.048710093954030205
+Inference speed (per batch): 0.038870184858987
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 181/200 done!🦾 Train step: 137560
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.014028012168005501
+PBL Mean: 0.04768220621014112
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 182/200 done!🦾 Train step: 138320
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.013938804676658229
+PBL Mean: 0.04751645288871307
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.020697815365651073
+PBL Mean: 0.04843017730642767
+Inference speed (per batch): 0.03872189437285723
+
+NEW BEST VAL ERROR 0.0207 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 183/200 done!🦾 Train step: 139080
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.013962719547807386
+PBL Mean: 0.04749435940267224
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 184/200 done!🦾 Train step: 139840
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.013914957116848151
+PBL Mean: 0.04738597754683149
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.02089342809117892
+PBL Mean: 0.04878295949276756
+Inference speed (per batch): 0.030495441117433502
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 185/200 done!🦾 Train step: 140600
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.013850871600994939
+PBL Mean: 0.04725356977923136
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 186/200 done!🦾 Train step: 141360
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.013766818012012854
+PBL Mean: 0.047112115060812546
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.020620696509585663
+PBL Mean: 0.04807855635881424
+Inference speed (per batch): 0.029811209888087914
+
+NEW BEST VAL ERROR 0.0206 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 187/200 done!🦾 Train step: 142120
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.013787745379254614
+PBL Mean: 0.04705273439911635
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 188/200 done!🦾 Train step: 142880
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.013764650688359612
+PBL Mean: 0.047013191486659806
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.020685669363421554
+PBL Mean: 0.048795435533804055
+Inference speed (per batch): 0.02966867877745672
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 189/200 done!🦾 Train step: 143640
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.013725045095442942
+PBL Mean: 0.04691638094618132
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 190/200 done!🦾 Train step: 144400
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.013619493178435062
+PBL Mean: 0.046748918152757384
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.020255807710482795
+PBL Mean: 0.04756291289539898
+Inference speed (per batch): 0.03858529170016375
+
+NEW BEST VAL ERROR 0.0203 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 191/200 done!🦾 Train step: 145160
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.013647094384865149
+PBL Mean: 0.04674432055142365
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 192/200 done!🦾 Train step: 145920
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.013600598308747928
+PBL Mean: 0.04664198096449438
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.020205096407409976
+PBL Mean: 0.04751741544288748
+Inference speed (per batch): 0.03008241624407032
+
+NEW BEST VAL ERROR 0.0202 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 193/200 done!🦾 Train step: 146680
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.013595622206891053
+PBL Mean: 0.046592902539199905
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 194/200 done!🦾 Train step: 147440
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.013507836713994805
+PBL Mean: 0.046461193518419014
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.02096772478783832
+PBL Mean: 0.047504388891598755
+Inference speed (per batch): 0.029551607707296226
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 195/200 done!🦾 Train step: 148200
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.013515750093287543
+PBL Mean: 0.04641950602005971
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 196/200 done!🦾 Train step: 148960
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.013474744142915464
+PBL Mean: 0.04634470703864568
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.02014953177422285
+PBL Mean: 0.047261855093871846
+Inference speed (per batch): 0.02959404857007458
+
+NEW BEST VAL ERROR 0.0201 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 197/200 done!🦾 Train step: 149720
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.013467592668817623
+PBL Mean: 0.04628999008748092
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 198/200 done!🦾 Train step: 150480
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.013368228099946129
+PBL Mean: 0.046120413382978814
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+canos_pf_mse+pf_constraint_violation: 0.020140088009921942
+PBL Mean: 0.04768029639826101
+Inference speed (per batch): 0.02839653383502189
+
+NEW BEST VAL ERROR 0.0201 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 199/200 done!🦾 Train step: 151240
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.013375235828080851
+PBL Mean: 0.046127458769632014
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+
+Epoch 200/200 done!🦾 Train step: 152000
+----------------------------------------
+canos_pf_mse+pf_constraint_violation: 0.013359755288662487
+PBL Mean: 0.04603334014843169
+
+Max GPU memory reserved: 2.0GB
+
+
+Current GPU memory reserved: 2.0GB
+
+
+TRAINING FINISHED!!🧠
+Calculating final validation error...
+
+
+Time to check validation error...🔍
+
+
+NEW BEST VAL ERROR 0.0199 FOUND!!🥳 
+Model has best validation performance yet.
+
+
+---------------------------- Results Summary 😎 ----------------------------
+
+Training error
+------------------
+canos_pf_mse+pf_constraint_violation: 0.01336
+PBL Mean: 0.046033
+
+Validation error(s)
+--------------------
+		canos_pf_mse+p	PBL Mean       	Inference spee	
+Val set 1	0.019916		0.047108		0.028176		
+
+Best epoch: 200
+Training finished in 33100.88 seconds.
+
+Script took 33103.61571455002 seconds to run.
+Closing lab...😺 Goodbye!

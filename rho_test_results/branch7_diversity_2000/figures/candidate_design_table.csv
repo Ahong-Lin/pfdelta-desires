@@ -1,0 +1,8 @@
+Experiment,Training design,Seen branches,Train rho
+rho=1,41976 branch7 rho=1 samples,7,1
+endpoint,"20988 loads x branch7 x {rho=0,rho=1}",7,"0,1"
+branch7-rho6,"6996 loads x branch7 x rho={0,0.2,...,1}",7,"0,0.2,0.4,0.6,0.8,1"
+branch7-rho11,3816 loads x branch7 x rho=0:0.1:1,7,0:0.1:1
+multi6-disjoint,"6996 loads, each load assigned to one of 6 branches, rho6","4,5,7,20,21,23","0,0.2,0.4,0.6,0.8,1"
+multi6-shared,1166 loads x 6 branches x rho6,"4,5,7,20,21,23","0,0.2,0.4,0.6,0.8,1"
+allbranch,6996 load-branch pairs balanced across 34 branches x rho6,34 normal-loop branches,"0,0.2,0.4,0.6,0.8,1"

@@ -1,0 +1,15 @@
+{
+    "train": {
+        "canos_pf_mse+pf_constraint_violation": 0.005469417519328233,
+        "PBL Mean": 0.02268028440640161
+    },
+    "val": [
+        {
+            "canos_pf_mse+pf_constraint_violation": 0.010062457988148227,
+            "PBL Mean": 0.024112973603255608,
+            "Inference speed (per batch)": 0.05687770520145183
+        }
+    ],
+    "best_point": "195",
+    "finished": true
+}

@@ -1,0 +1,5 @@
+model,train_samples,composition
+endpoint-budget,41976,S6 endpoint base
+rho6-common,41976,S6 rho6 base
+endpoint-fewshot-A8,43576,endpoint-budget + A8 100 loads/branch endpoint
+rho6-fewshot-A8,43576,rho6-common + same A8 endpoint fewshot

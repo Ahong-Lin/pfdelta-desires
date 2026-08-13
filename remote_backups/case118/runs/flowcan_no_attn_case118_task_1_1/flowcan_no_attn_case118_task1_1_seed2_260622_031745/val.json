@@ -1,0 +1,702 @@
+{
+  "1": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 15.81684248307172,
+      "PBL Mean": 1.5819067997090956,
+      "Inference speed (per batch)": 0.03737458005985793
+    }
+  ],
+  "3": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 3.7317870083977196,
+      "PBL Mean": 1.2366409175536213,
+      "Inference speed (per batch)": 0.03782131468247184
+    }
+  ],
+  "5": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 1.1097452836878159,
+      "PBL Mean": 0.6834468189407797,
+      "Inference speed (per batch)": 0.028086132630157995
+    }
+  ],
+  "7": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.902097645927878,
+      "PBL Mean": 0.6904263454325059,
+      "Inference speed (per batch)": 0.02799373730633627
+    }
+  ],
+  "9": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.6801000738845152,
+      "PBL Mean": 0.425981989327599,
+      "Inference speed (per batch)": 0.03697571018984651
+    }
+  ],
+  "11": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.44559281678760754,
+      "PBL Mean": 0.4251509428024292,
+      "Inference speed (per batch)": 0.029019992888959893
+    }
+  ],
+  "13": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.37958175014047063,
+      "PBL Mean": 0.4302489862722509,
+      "Inference speed (per batch)": 0.028985223824651365
+    }
+  ],
+  "15": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 9.834964499754065,
+      "PBL Mean": 1.179775224012487,
+      "Inference speed (per batch)": 0.02911474055966691
+    }
+  ],
+  "17": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 8.203749202279484,
+      "PBL Mean": 1.3221314219867482,
+      "Inference speed (per batch)": 0.028569793161552618
+    }
+  ],
+  "19": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 6.81576291252585,
+      "PBL Mean": 1.5692726570017197,
+      "Inference speed (per batch)": 0.028738102582557237
+    }
+  ],
+  "21": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 6.9848533798666566,
+      "PBL Mean": 1.2092886854620541,
+      "Inference speed (per batch)": 0.02849991007379311
+    }
+  ],
+  "23": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 6.3655799192540785,
+      "PBL Mean": 1.3386826220680685,
+      "Inference speed (per batch)": 0.02860205310451634
+    }
+  ],
+  "25": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 1.849980323454913,
+      "PBL Mean": 0.8597859768306508,
+      "Inference speed (per batch)": 0.028200866103939275
+    }
+  ],
+  "27": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 1.1827899589258082,
+      "PBL Mean": 0.6297621958396014,
+      "Inference speed (per batch)": 0.028472981751239038
+    }
+  ],
+  "29": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 1.013280884658589,
+      "PBL Mean": 0.5160968226544997,
+      "Inference speed (per batch)": 0.029059506140594535
+    }
+  ],
+  "31": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 1.2050028387237997,
+      "PBL Mean": 0.4560488125857185,
+      "Inference speed (per batch)": 0.02872802394113558
+    }
+  ],
+  "33": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.47042142187847813,
+      "PBL Mean": 0.41662853465360755,
+      "Inference speed (per batch)": 0.02888627976370866
+    }
+  ],
+  "35": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.3554648206514471,
+      "PBL Mean": 0.31114478637190424,
+      "Inference speed (per batch)": 0.028818068367100377
+    }
+  ],
+  "37": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.4263931435697219,
+      "PBL Mean": 0.426486574902254,
+      "Inference speed (per batch)": 0.028889426339746397
+    }
+  ],
+  "39": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.3458329037708395,
+      "PBL Mean": 0.29107421846950754,
+      "Inference speed (per batch)": 0.028837408449993853
+    }
+  ],
+  "41": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.2931373657549129,
+      "PBL Mean": 0.2961604935281417,
+      "Inference speed (per batch)": 0.037189180199878616
+    }
+  ],
+  "43": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.2657215954626308,
+      "PBL Mean": 0.2398783068446552,
+      "Inference speed (per batch)": 0.02824691887534059
+    }
+  ],
+  "45": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.22421341170282924,
+      "PBL Mean": 0.22064235823995926,
+      "Inference speed (per batch)": 0.028396693061051123
+    }
+  ],
+  "47": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.2717035107752856,
+      "PBL Mean": 0.23899112186011146,
+      "Inference speed (per batch)": 0.028611779486870065
+    }
+  ],
+  "49": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.16280207160641166,
+      "PBL Mean": 0.2071114298175363,
+      "Inference speed (per batch)": 0.028430722968871978
+    }
+  ],
+  "51": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.296658228951342,
+      "PBL Mean": 0.2778663523056928,
+      "Inference speed (per batch)": 0.028263631938299272
+    }
+  ],
+  "53": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.12421117424964905,
+      "PBL Mean": 0.16837645208134372,
+      "Inference speed (per batch)": 0.028547188727294698
+    }
+  ],
+  "55": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.16382406827281504,
+      "PBL Mean": 0.2091541109716191,
+      "Inference speed (per batch)": 0.028291002851363052
+    }
+  ],
+  "57": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.10589847354327932,
+      "PBL Mean": 0.15745825855170978,
+      "Inference speed (per batch)": 0.028472033167696174
+    }
+  ],
+  "59": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.09819809873314465,
+      "PBL Mean": 0.16867118267452016,
+      "Inference speed (per batch)": 0.02823973545421134
+    }
+  ],
+  "61": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.10338236514259787,
+      "PBL Mean": 0.15467564165592193,
+      "Inference speed (per batch)": 0.029871831632986227
+    }
+  ],
+  "63": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.10932667325524723,
+      "PBL Mean": 0.1446535042103599,
+      "Inference speed (per batch)": 0.03919650186811957
+    }
+  ],
+  "65": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.11282875607995425,
+      "PBL Mean": 0.2104776713777991,
+      "Inference speed (per batch)": 0.028559946838547203
+    }
+  ],
+  "67": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.0844312046380604,
+      "PBL Mean": 0.13843678639215581,
+      "Inference speed (per batch)": 0.02887962947544806
+    }
+  ],
+  "69": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.08186268547878546,
+      "PBL Mean": 0.14182150258737453,
+      "Inference speed (per batch)": 0.03792820247438024
+    }
+  ],
+  "71": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.09637738597743652,
+      "PBL Mean": 0.1700987358303631,
+      "Inference speed (per batch)": 0.0282068504308186
+    }
+  ],
+  "73": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.08941781932816786,
+      "PBL Mean": 0.11056020952322904,
+      "Inference speed (per batch)": 0.028484383066568305
+    }
+  ],
+  "75": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.07506292997037663,
+      "PBL Mean": 0.15736053480821496,
+      "Inference speed (per batch)": 0.028233323598225765
+    }
+  ],
+  "77": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.054834398320492576,
+      "PBL Mean": 0.10406095797524732,
+      "Inference speed (per batch)": 0.02829758265904863
+    }
+  ],
+  "79": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.06656545536483036,
+      "PBL Mean": 0.11496541394906885,
+      "Inference speed (per batch)": 0.028431417335591774
+    }
+  ],
+  "81": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.052132555141168484,
+      "PBL Mean": 0.10364816635847092,
+      "Inference speed (per batch)": 0.028507175308871358
+    }
+  ],
+  "83": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.06007943517144988,
+      "PBL Mean": 0.09884824393426671,
+      "Inference speed (per batch)": 0.02887021190733375
+    }
+  ],
+  "85": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.07280275747179984,
+      "PBL Mean": 0.10558358316912371,
+      "Inference speed (per batch)": 0.02822511694257093
+    }
+  ],
+  "87": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.043647715011063744,
+      "PBL Mean": 0.08712815370629816,
+      "Inference speed (per batch)": 0.02857409944648252
+    }
+  ],
+  "89": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.04662446480463533,
+      "PBL Mean": 0.09331971599775202,
+      "Inference speed (per batch)": 0.03589805310920757
+    }
+  ],
+  "91": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.058596692453412445,
+      "PBL Mean": 0.09420640845509136,
+      "Inference speed (per batch)": 0.03540906565647353
+    }
+  ],
+  "93": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.04013173908871763,
+      "PBL Mean": 0.08157178224886165,
+      "Inference speed (per batch)": 0.036056257617276384
+    }
+  ],
+  "95": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.05999888186069096,
+      "PBL Mean": 0.11456686232019873,
+      "Inference speed (per batch)": 0.03762375291245168
+    }
+  ],
+  "97": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.03927851117709104,
+      "PBL Mean": 0.07677799042533426,
+      "Inference speed (per batch)": 0.02924098128124195
+    }
+  ],
+  "99": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.03605727198369363,
+      "PBL Mean": 0.07517160913523506,
+      "Inference speed (per batch)": 0.0283944845021538
+    }
+  ],
+  "101": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.035910175828372734,
+      "PBL Mean": 0.07482241225593231,
+      "Inference speed (per batch)": 0.03784425239051309
+    }
+  ],
+  "103": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.03347989498254131,
+      "PBL Mean": 0.0724775608848123,
+      "Inference speed (per batch)": 0.028874341102645678
+    }
+  ],
+  "105": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.03290295160430319,
+      "PBL Mean": 0.0705678022959653,
+      "Inference speed (per batch)": 0.037771652013008646
+    }
+  ],
+  "107": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.03221214652499732,
+      "PBL Mean": 0.06962704939000747,
+      "Inference speed (per batch)": 0.03652837449438213
+    }
+  ],
+  "109": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.032332035438979376,
+      "PBL Mean": 0.06673607791171354,
+      "Inference speed (per batch)": 0.03705498869119979
+    }
+  ],
+  "111": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.0327039052020101,
+      "PBL Mean": 0.06989558768623015,
+      "Inference speed (per batch)": 0.037028982683413605
+    }
+  ],
+  "113": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.031889149239834616,
+      "PBL Mean": 0.06820222910712748,
+      "Inference speed (per batch)": 0.037324270018485976
+    }
+  ],
+  "115": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.03206533964942483,
+      "PBL Mean": 0.07256057148470599,
+      "Inference speed (per batch)": 0.02874886007322108
+    }
+  ],
+  "117": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.02999735038508387,
+      "PBL Mean": 0.06801766551592771,
+      "Inference speed (per batch)": 0.0288800522164606
+    }
+  ],
+  "119": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.029738044651115642,
+      "PBL Mean": 0.06281532583867802,
+      "Inference speed (per batch)": 0.02865268829114297
+    }
+  ],
+  "121": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.029276653883211753,
+      "PBL Mean": 0.06528152880423209,
+      "Inference speed (per batch)": 0.028482117486076756
+    }
+  ],
+  "123": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.02837156795841806,
+      "PBL Mean": 0.06031087658861104,
+      "Inference speed (per batch)": 0.0283576361300862
+    }
+  ],
+  "125": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.027550504181314918,
+      "PBL Mean": 0.058972461390144684,
+      "Inference speed (per batch)": 0.028380758790573214
+    }
+  ],
+  "127": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.027564226704485276,
+      "PBL Mean": 0.059742602530647726,
+      "Inference speed (per batch)": 0.02867790721630787
+    }
+  ],
+  "129": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.027955664935357432,
+      "PBL Mean": 0.06262175778255744,
+      "Inference speed (per batch)": 0.028859245763434207
+    }
+  ],
+  "131": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.02575099549311049,
+      "PBL Mean": 0.05870227037983782,
+      "Inference speed (per batch)": 0.03729416926336639
+    }
+  ],
+  "133": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.02589176847215961,
+      "PBL Mean": 0.058705174221712,
+      "Inference speed (per batch)": 0.03661410432199345
+    }
+  ],
+  "135": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.025235500164768276,
+      "PBL Mean": 0.0562988586285535,
+      "Inference speed (per batch)": 0.038181065435192604
+    }
+  ],
+  "137": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.024252693333169994,
+      "PBL Mean": 0.05586620166021235,
+      "Inference speed (per batch)": 0.037119678987244914
+    }
+  ],
+  "139": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.02427063643494073,
+      "PBL Mean": 0.05540417253094561,
+      "Inference speed (per batch)": 0.028346368321217598
+    }
+  ],
+  "141": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.02446475362076479,
+      "PBL Mean": 0.05579962861888549,
+      "Inference speed (per batch)": 0.02848484542713884
+    }
+  ],
+  "143": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.024563892602043995,
+      "PBL Mean": 0.05441828089601854,
+      "Inference speed (per batch)": 0.0282439961015959
+    }
+  ],
+  "145": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.02383805905633113,
+      "PBL Mean": 0.054195237159729,
+      "Inference speed (per batch)": 0.028294134668677168
+    }
+  ],
+  "147": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.023250684185939677,
+      "PBL Mean": 0.05380179829457227,
+      "Inference speed (per batch)": 0.02834221163408502
+    }
+  ],
+  "149": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.02300459343720885,
+      "PBL Mean": 0.052964597896618004,
+      "Inference speed (per batch)": 0.028393657835583914
+    }
+  ],
+  "151": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.02272271579679321,
+      "PBL Mean": 0.05231042210670078,
+      "Inference speed (per batch)": 0.028517443552503692
+    }
+  ],
+  "153": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.023028705663540785,
+      "PBL Mean": 0.05235099441864911,
+      "Inference speed (per batch)": 0.029350117383086505
+    }
+  ],
+  "155": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.023142831509604174,
+      "PBL Mean": 0.05258657542221686,
+      "Inference speed (per batch)": 0.028436384293908143
+    }
+  ],
+  "157": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.022327577015932867,
+      "PBL Mean": 0.051750276281553154,
+      "Inference speed (per batch)": 0.028769217349369738
+    }
+  ],
+  "159": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.022634328781243634,
+      "PBL Mean": 0.050829441933070915,
+      "Inference speed (per batch)": 0.02848083258825628
+    }
+  ],
+  "161": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.022264634554877,
+      "PBL Mean": 0.05142973293276394,
+      "Inference speed (per batch)": 0.028704562092966894
+    }
+  ],
+  "163": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.021716758236289026,
+      "PBL Mean": 0.05063409651903545,
+      "Inference speed (per batch)": 0.028797124101616004
+    }
+  ],
+  "165": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.022811373323202135,
+      "PBL Mean": 0.05152926348588046,
+      "Inference speed (per batch)": 0.028730298266472186
+    }
+  ],
+  "167": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.02187824343495509,
+      "PBL Mean": 0.051122763928245094,
+      "Inference speed (per batch)": 0.029204166857251787
+    }
+  ],
+  "169": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.021887434799881544,
+      "PBL Mean": 0.05005041325793547,
+      "Inference speed (per batch)": 0.028389068016344134
+    }
+  ],
+  "171": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.021168024323004134,
+      "PBL Mean": 0.04949296730406144,
+      "Inference speed (per batch)": 0.028324996767675175
+    }
+  ],
+  "173": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.021174774844856824,
+      "PBL Mean": 0.04943654261091176,
+      "Inference speed (per batch)": 0.03878877088564503
+    }
+  ],
+  "175": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.021225535102626855,
+      "PBL Mean": 0.05044183617129045,
+      "Inference speed (per batch)": 0.03856376010705443
+    }
+  ],
+  "177": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.020813249325489298,
+      "PBL Mean": 0.04882140050039572,
+      "Inference speed (per batch)": 0.029366586134111618
+    }
+  ],
+  "179": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.02134340646512368,
+      "PBL Mean": 0.048710093954030205,
+      "Inference speed (per batch)": 0.038870184858987
+    }
+  ],
+  "181": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.020697815365651073,
+      "PBL Mean": 0.04843017730642767,
+      "Inference speed (per batch)": 0.03872189437285723
+    }
+  ],
+  "183": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.02089342809117892,
+      "PBL Mean": 0.04878295949276756,
+      "Inference speed (per batch)": 0.030495441117433502
+    }
+  ],
+  "185": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.020620696509585663,
+      "PBL Mean": 0.04807855635881424,
+      "Inference speed (per batch)": 0.029811209888087914
+    }
+  ],
+  "187": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.020685669363421554,
+      "PBL Mean": 0.048795435533804055,
+      "Inference speed (per batch)": 0.02966867877745672
+    }
+  ],
+  "189": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.020255807710482795,
+      "PBL Mean": 0.04756291289539898,
+      "Inference speed (per batch)": 0.03858529170016375
+    }
+  ],
+  "191": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.020205096407409976,
+      "PBL Mean": 0.04751741544288748,
+      "Inference speed (per batch)": 0.03008241624407032
+    }
+  ],
+  "193": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.02096772478783832,
+      "PBL Mean": 0.047504388891598755,
+      "Inference speed (per batch)": 0.029551607707296226
+    }
+  ],
+  "195": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.02014953177422285,
+      "PBL Mean": 0.047261855093871846,
+      "Inference speed (per batch)": 0.02959404857007458
+    }
+  ],
+  "197": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.020140088009921942,
+      "PBL Mean": 0.04768029639826101,
+      "Inference speed (per batch)": 0.02839653383502189
+    }
+  ],
+  "199": [
+    {
+      "canos_pf_mse+pf_constraint_violation": 0.019915675612933496,
+      "PBL Mean": 0.04710839206681532,
+      "Inference speed (per batch)": 0.02817629860193633
+    }
+  ]
+}

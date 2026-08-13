@@ -1,0 +1,4 @@
+model,train_samples,composition
+endpoint-common,13992,"1166 loads x 6 branches x rho={0,1}"
+rho6-common,41976,"same 1166 loads x 6 branches x rho={0,0.2,0.4,0.6,0.8,1}"
+endpoint-budget,41976,"3498 loads x 6 branches x rho={0,1}"

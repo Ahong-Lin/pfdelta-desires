@@ -1,0 +1,113 @@
+{
+  "data_generation_rho/case30/rho_pf_scaling_T34_final_rho1_6800:test": {
+    "runs": [
+      {
+        "run_dir": "runs/canos_case30_rho_scaling_endpoint_40k_plus_same_load_uniformrho5k/canos_case30_rho_scaling_endpoint_40k_plus_same_load_uniformrho5k_ep300_260803_162902",
+        "model": "canos_pf",
+        "seed": 11,
+        "rho_root": "data_generation_rho/case30/rho_pf_scaling_T34_final_rho1_6800",
+        "split": "test",
+        "loss_mode": "pbl",
+        "dataset": {
+          "num_samples": 6800,
+          "rho_counts": {
+            "1": 6800
+          },
+          "num_load_settings": 6800
+        },
+        "overall": {
+          "PBL Mean": 0.005313455061439205,
+          "Inference speed (per batch)": 8.463493544608355,
+          "PBL Max": 0.23213937878608704,
+          "PBL L2": 0.037892428294700735,
+          "Relative PBL Mean": 0.04130555262460428,
+          "PBL Load Scale": 0.12899320854860194,
+          "Relative PBL Mean / Max Load": 0.009847388342022896,
+          "PBL Max Load Scale": 0.5596621535806094
+        },
+        "by_rho": {
+          "1": {
+            "num_samples": 6800,
+            "metrics": {
+              "PBL Mean": 0.005313454972689643,
+              "Inference speed (per batch)": 8.650682054460049,
+              "PBL Max": 0.23213937878608704,
+              "PBL L2": 0.03789242677828845,
+              "Relative PBL Mean": 0.041305552124977114,
+              "PBL Load Scale": 0.12899320781230927,
+              "Relative PBL Mean / Max Load": 0.009847388223690145,
+              "PBL Max Load Scale": 0.5596621443243588
+            }
+          }
+        }
+      },
+      {
+        "run_dir": "runs/canos_case30_rho_scaling_endpoint_40k_plus_same_load_uniformrho10k/canos_case30_rho_scaling_endpoint_40k_plus_same_load_uniformrho10k_ep300_260803_163045",
+        "model": "canos_pf",
+        "seed": 11,
+        "rho_root": "data_generation_rho/case30/rho_pf_scaling_T34_final_rho1_6800",
+        "split": "test",
+        "loss_mode": "pbl",
+        "dataset": {
+          "num_samples": 6800,
+          "rho_counts": {
+            "1": 6800
+          },
+          "num_load_settings": 6800
+        },
+        "overall": {
+          "PBL Mean": 0.004296498003908816,
+          "Inference speed (per batch)": 8.914304237812757,
+          "PBL Max": 0.5926616191864014,
+          "PBL L2": 0.031656878757126194,
+          "Relative PBL Mean": 0.033382777361308826,
+          "PBL Load Scale": 0.12899320854860194,
+          "Relative PBL Mean / Max Load": 0.007882844115443089,
+          "PBL Max Load Scale": 0.5596621535806094
+        },
+        "by_rho": {
+          "1": {
+            "num_samples": 6800,
+            "metrics": {
+              "PBL Mean": 0.004296497967751587,
+              "Inference speed (per batch)": 9.991422879509628,
+              "PBL Max": 0.5926616191864014,
+              "PBL L2": 0.03165687863879344,
+              "Relative PBL Mean": 0.03338277785217061,
+              "PBL Load Scale": 0.12899320781230927,
+              "Relative PBL Mean / Max Load": 0.00788284414283493,
+              "PBL Max Load Scale": 0.5596621443243588
+            }
+          }
+        }
+      }
+    ],
+    "summary": {
+      "PBL Mean": {
+        "mean": 0.004804976532674011,
+        "std": 0.000719097231555256,
+        "n": 2
+      },
+      "PBL Max": {
+        "mean": 0.4124004989862442,
+        "std": 0.25492772095562893,
+        "n": 2
+      },
+      "PBL L2": {
+        "mean": 0.03477465352591347,
+        "std": 0.0044091993624435985,
+        "n": 2
+      },
+      "Relative PBL Mean": {
+        "mean": 0.03734416499295655,
+        "std": 0.005602248114493251,
+        "n": 2
+      },
+      "Relative PBL Mean / Max Load": {
+        "mean": 0.008865116228732994,
+        "std": 0.0013891425445554631,
+        "n": 2
+      }
+    }
+  }
+}

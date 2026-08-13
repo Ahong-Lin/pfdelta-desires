@@ -1,0 +1,108 @@
+{
+  "data_generation_rho/case30/rho_pf_scaling_T34_final_rho1_6800:test": {
+    "runs": [
+      {
+        "run_dir": "runs/canos_case30_rho_scaling_endpoint_45k/canos_case30_rho_scaling_endpoint_45k_ep300_260804_105832",
+        "model": "canos_pf",
+        "seed": 11,
+        "rho_root": "data_generation_rho/case30/rho_pf_scaling_T34_final_rho1_6800",
+        "split": "test",
+        "loss_mode": "pbl",
+        "dataset": {
+          "num_samples": 6800,
+          "rho_counts": {
+            "1": 6800
+          },
+          "num_load_settings": 6800
+        },
+        "overall": {
+          "PBL Mean": 0.013067927776890642,
+          "Inference speed (per batch)": 0.9409044068306684,
+          "PBL Max": 0.3297349512577057,
+          "PBL L2": 0.09435618798522388,
+          "Relative PBL Mean": 0.10152266612824272,
+          "PBL Load Scale": 0.1289932099160026,
+          "Relative PBL Mean / Max Load": 0.02428951522006708,
+          "PBL Max Load Scale": 0.5596621468487908
+        }
+      },
+      {
+        "run_dir": "runs/canos_case30_rho_scaling_endpoint_50k/canos_case30_rho_scaling_endpoint_50k_ep300_260804_105839",
+        "model": "canos_pf",
+        "seed": 11,
+        "rho_root": "data_generation_rho/case30/rho_pf_scaling_T34_final_rho1_6800",
+        "split": "test",
+        "loss_mode": "pbl",
+        "dataset": {
+          "num_samples": 6800,
+          "rho_counts": {
+            "1": 6800
+          },
+          "num_load_settings": 6800
+        },
+        "overall": {
+          "PBL Mean": 0.011084184539230432,
+          "Inference speed (per batch)": 0.8327143015339971,
+          "PBL Max": 0.7875247001647949,
+          "PBL L2": 0.07983432953848558,
+          "Relative PBL Mean": 0.08608461267807904,
+          "PBL Load Scale": 0.12899320767206304,
+          "Relative PBL Mean / Max Load": 0.020517905933015487,
+          "PBL Max Load Scale": 0.5596621468487908
+        }
+      },
+      {
+        "run_dir": "runs/canos_case30_rho_scaling_endpoint_320k/canos_case30_rho_scaling_endpoint_320k_ep300_260801_152355",
+        "model": "canos_pf",
+        "seed": 11,
+        "rho_root": "data_generation_rho/case30/rho_pf_scaling_T34_final_rho1_6800",
+        "split": "test",
+        "loss_mode": "pbl",
+        "dataset": {
+          "num_samples": 6800,
+          "rho_counts": {
+            "1": 6800
+          },
+          "num_load_settings": 6800
+        },
+        "overall": {
+          "PBL Mean": 0.0018937139388392954,
+          "Inference speed (per batch)": 0.8366252752020955,
+          "PBL Max": 0.06754157692193985,
+          "PBL L2": 0.013253433073268216,
+          "Relative PBL Mean": 0.014719048942274908,
+          "PBL Load Scale": 0.12899320767206304,
+          "Relative PBL Mean / Max Load": 0.0035088309284080476,
+          "PBL Max Load Scale": 0.5596621468487908
+        }
+      }
+    ],
+    "summary": {
+      "PBL Mean": {
+        "mean": 0.00868194208498679,
+        "std": 0.005961865507653828,
+        "n": 3
+      },
+      "PBL Max": {
+        "mean": 0.39493374278148013,
+        "std": 0.36439276371897744,
+        "n": 3
+      },
+      "PBL L2": {
+        "mean": 0.06248131686565923,
+        "std": 0.04324649697021299,
+        "n": 3
+      },
+      "Relative PBL Mean": {
+        "mean": 0.06744210924953223,
+        "std": 0.046307388068261277,
+        "n": 3
+      },
+      "Relative PBL Mean / Max Load": {
+        "mean": 0.016105417360496872,
+        "std": 0.011070761105694434,
+        "n": 3
+      }
+    }
+  }
+}

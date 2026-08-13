@@ -1,0 +1,5 @@
+Experiment,Training design
+EP2-common,"6996 loads x {0,1}"
+rho4-common,"same loads x {0,0.3,0.6,1}"
+rho6-common,"same loads x {0,0.2,0.4,0.6,0.8,1}"
+rho11-common,same loads x 0:0.1:1

@@ -1,0 +1,73 @@
+{
+  "data_generation_rho/case30/rho_pf_scaling_T34_final_rho1_6800:test": {
+    "runs": [
+      {
+        "run_dir": "runs/canos_case30_rho_scaling_endpoint_160k/canos_case30_rho_scaling_endpoint_160k_ep300_260801_103758",
+        "model": "canos_pf",
+        "seed": 11,
+        "rho_root": "data_generation_rho/case30/rho_pf_scaling_T34_final_rho1_6800",
+        "split": "test",
+        "loss_mode": "pbl",
+        "dataset": {
+          "num_samples": 6800,
+          "rho_counts": {
+            "1": 6800
+          },
+          "num_load_settings": 6800
+        },
+        "overall": {
+          "PBL Mean": 0.002397305579198634,
+          "Inference speed (per batch)": 0.9520047968253493,
+          "PBL Max": 0.14338040351867676,
+          "PBL L2": 0.016896023000864423,
+          "Relative PBL Mean": 0.018624159750692985,
+          "PBL Load Scale": 0.12899320910958684,
+          "Relative PBL Mean / Max Load": 0.0044315826049184095,
+          "PBL Max Load Scale": 0.5596621468487908
+        },
+        "by_rho": {
+          "1": {
+            "num_samples": 6800,
+            "metrics": {
+              "PBL Mean": 0.002397306134157321,
+              "Inference speed (per batch)": 0.8218426639214158,
+              "PBL Max": 0.14337888360023499,
+              "PBL L2": 0.016896025328075184,
+              "Relative PBL Mean": 0.018624166557017496,
+              "PBL Load Scale": 0.12899320868884817,
+              "Relative PBL Mean / Max Load": 0.004431587735957959,
+              "PBL Max Load Scale": 0.5596621377327863
+            }
+          }
+        }
+      }
+    ],
+    "summary": {
+      "PBL Mean": {
+        "mean": 0.002397305579198634,
+        "std": 0.0,
+        "n": 1
+      },
+      "PBL Max": {
+        "mean": 0.14338040351867676,
+        "std": 0.0,
+        "n": 1
+      },
+      "PBL L2": {
+        "mean": 0.016896023000864423,
+        "std": 0.0,
+        "n": 1
+      },
+      "Relative PBL Mean": {
+        "mean": 0.018624159750692985,
+        "std": 0.0,
+        "n": 1
+      },
+      "Relative PBL Mean / Max Load": {
+        "mean": 0.0044315826049184095,
+        "std": 0.0,
+        "n": 1
+      }
+    }
+  }
+}

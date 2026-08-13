@@ -1,0 +1,1793 @@
+📑 Console output is now being recorded!
+
+📑 Config being used: pfnet_case118_task_1_1
+📑 Current working directory is not a git repository; skipping commit hash capture.
+📑 Device being used: cuda
+Downloading files for task 1.1...
+Shuffle files already exist. Skipping download.
+case118 data already exists. Skipping download.
+Processing combined data for task 1.1
+Processing split: PFNet 1.1 case118 n feasible train (48600 files)
+Processing split: PFNet 1.1 case118 n feasible val (5400 files)
+Processing split: PFNet 1.1 case118 n feasible test (2000 files)
+Processing split: PFNet 1.1 case118 n-1 feasible test (2000 files)
+Processing split: PFNet 1.1 case118 n-2 feasible test (2000 files)
+Processing split: PFNet 1.1 case118 n near infeasible test (200 files)
+Processing split: PFNet 1.1 case118 n-1 near infeasible test (200 files)
+Processing split: PFNet 1.1 case118 n-2 near infeasible test (200 files)
+Collating combined train data with 48600 samples
+Saved combined train data with 48600 samples
+Collating combined val data with 5400 samples
+Saved combined val data with 5400 samples
+Collating combined test data with 6600 samples
+Saved combined test data with 6600 samples
+Loading train dataset from data/pfdelta_data/processed/combined_task_1.1_PFNet_case118/train.pt
+Downloading files for task 1.1...
+Shuffle files already exist. Skipping download.
+case118 data already exists. Skipping download.
+Loading val dataset from data/pfdelta_data/processed/combined_task_1.1_PFNet_case118/val.pt
+
+Datasets loaded! ✅
+Models loaded! ✅
+Optimizer loaded! ✅
+Loss function loaded! ✅
+
+📑 Number of trainable parameters: 2114828
+
+Trainer initialized!✔
+Starting training...
+
+
+
+Epoch 1/100 done!🦾 Train step: 760
+----------------------------------------
+MSELoss: 0.29446139890504514
+Masked MSE: 0.572897180248248
+Masked MSE, reg.: 0.7281406888052037
+PBL Mean: 3.914292853756955
+PBL Max: 91.22864358299657
+PBL L2: 83.66480364046599
+
+Max GPU memory reserved: 0.7GB
+
+
+Current GPU memory reserved: 0.7GB
+
+
+
+Epoch 2/100 done!🦾 Train step: 1520
+----------------------------------------
+MSELoss: 0.13581168509431576
+Masked MSE: 0.2890144734006179
+Masked MSE, reg.: 0.34822476482705067
+PBL Mean: 2.7219435996130894
+PBL Max: 62.9492038124486
+PBL L2: 51.499616622924805
+
+Max GPU memory reserved: 0.7GB
+
+
+Current GPU memory reserved: 0.7GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.23593440984978395
+Masked MSE, reg.: 0.2720190777498133
+MSELoss: 0.10270124919274275
+PBL Mean: 1.3080986499786378
+PBL Max: 14.77836477616254
+PBL L2: 20.85312282337862
+Inference speed (per batch): 0.017565512036740342
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 3/100 done!🦾 Train step: 2280
+----------------------------------------
+MSELoss: 0.0965728613106828
+Masked MSE: 0.2020845651430519
+Masked MSE, reg.: 0.2459015745865671
+PBL Mean: 2.3239780488767123
+PBL Max: 55.49651196128443
+PBL L2: 43.46810607910156
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 4/100 done!🦾 Train step: 3040
+----------------------------------------
+MSELoss: 0.0730239380984322
+Masked MSE: 0.15121251657409104
+Masked MSE, reg.: 0.18514216548125995
+PBL Mean: 2.0919466951960013
+PBL Max: 52.296600886395105
+PBL L2: 38.93397094325015
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.09227383539957158
+Masked MSE, reg.: 0.11234813052065232
+MSELoss: 0.044140808459590467
+PBL Mean: 0.9586821759448332
+PBL Max: 16.54227901907528
+PBL L2: 16.77544059753418
+Inference speed (per batch): 0.017395523929564446
+
+NEW BEST VAL ERROR 0.0923 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 5/100 done!🦾 Train step: 3800
+----------------------------------------
+MSELoss: 0.05833354911423828
+Masked MSE: 0.11986532231890841
+Masked MSE, reg.: 0.14743298492149304
+PBL Mean: 1.9376929176481146
+PBL Max: 48.78743621926559
+PBL L2: 35.89837857798526
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 6/100 done!🦾 Train step: 4560
+----------------------------------------
+MSELoss: 0.047598293457964534
+Masked MSE: 0.09737214412736266
+Masked MSE, reg.: 0.12008351231680105
+PBL Mean: 1.8179831980090393
+PBL Max: 45.121966655630814
+PBL L2: 33.62643389199909
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.06891979145653107
+Masked MSE, reg.: 0.08139712477431578
+MSELoss: 0.031291485490167845
+PBL Mean: 0.8327172174173243
+PBL Max: 16.495375947391285
+PBL L2: 15.112245840184828
+Inference speed (per batch): 0.015377451952115413
+
+NEW BEST VAL ERROR 0.0689 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 7/100 done!🦾 Train step: 5320
+----------------------------------------
+MSELoss: 0.04012290350602646
+Masked MSE: 0.08201105945596569
+Masked MSE, reg.: 0.10118988509240903
+PBL Mean: 1.7158011202749452
+PBL Max: 43.41797322474028
+PBL L2: 31.826684085946333
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 8/100 done!🦾 Train step: 6080
+----------------------------------------
+MSELoss: 0.035252826611854526
+Masked MSE: 0.07259512292221189
+Masked MSE, reg.: 0.08917680139604368
+PBL Mean: 1.62188016003684
+PBL Max: 40.83960122309233
+PBL L2: 30.01526200645848
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.037539909692371594
+Masked MSE, reg.: 0.045966733290868644
+MSELoss: 0.018131185531177943
+PBL Mean: 0.7400086409905378
+PBL Max: 13.442004574046415
+PBL L2: 13.025300598144531
+Inference speed (per batch): 0.015844395410728313
+
+NEW BEST VAL ERROR 0.0375 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 9/100 done!🦾 Train step: 6840
+----------------------------------------
+MSELoss: 0.03137974206505245
+Masked MSE: 0.06505602690832395
+Masked MSE, reg.: 0.0795976267147221
+PBL Mean: 1.5474375972622318
+PBL Max: 38.927951017178984
+PBL L2: 28.64910078299673
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 10/100 done!🦾 Train step: 7600
+----------------------------------------
+MSELoss: 0.028608147304897247
+Masked MSE: 0.05981168410201606
+Masked MSE, reg.: 0.07281806291031995
+PBL Mean: 1.479198105711686
+PBL Max: 37.14477828176398
+PBL L2: 27.30934561428271
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.032048928387024826
+Masked MSE, reg.: 0.03871258705416147
+MSELoss: 0.015125415342695573
+PBL Mean: 0.6694840389139513
+PBL Max: 12.78825600567986
+PBL L2: 11.971821145450368
+Inference speed (per batch): 0.013952588222523713
+
+NEW BEST VAL ERROR 0.032 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 11/100 done!🦾 Train step: 8360
+----------------------------------------
+MSELoss: 0.026343656350907525
+Masked MSE: 0.05545812790821257
+Masked MSE, reg.: 0.0672445485466405
+PBL Mean: 1.4212341672495792
+PBL Max: 35.13165261870936
+PBL L2: 26.148530470697505
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 12/100 done!🦾 Train step: 9120
+----------------------------------------
+MSELoss: 0.024472876613665567
+Masked MSE: 0.05191944099374508
+Masked MSE, reg.: 0.06266903542472343
+PBL Mean: 1.3708208145279632
+PBL Max: 33.7529802949805
+PBL L2: 25.177795919619108
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.028661397274802713
+Masked MSE, reg.: 0.033937473792363615
+MSELoss: 0.013071183082373703
+PBL Mean: 0.6008041290675893
+PBL Max: 10.932838249206544
+PBL L2: 10.462388464983771
+Inference speed (per batch): 0.012116887752028346
+
+NEW BEST VAL ERROR 0.0287 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 13/100 done!🦾 Train step: 9880
+----------------------------------------
+MSELoss: 0.02278754014619871
+Masked MSE: 0.04865777030293095
+Masked MSE, reg.: 0.058510195360960145
+PBL Mean: 1.3272204330092983
+PBL Max: 32.03498904705047
+PBL L2: 24.325483389904626
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 14/100 done!🦾 Train step: 10640
+----------------------------------------
+MSELoss: 0.02153299502832325
+Masked MSE: 0.046363644071511535
+Masked MSE, reg.: 0.055481314531674514
+PBL Mean: 1.2840496064800966
+PBL Max: 30.69403866215756
+PBL L2: 23.527400985517
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.025471721129382358
+Masked MSE, reg.: 0.02951147043529679
+MSELoss: 0.011183739968520753
+PBL Mean: 0.591501174253576
+PBL Max: 11.348360858244055
+PBL L2: 10.768510392132928
+Inference speed (per batch): 0.011450901976615354
+
+NEW BEST VAL ERROR 0.0255 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 15/100 done!🦾 Train step: 11400
+----------------------------------------
+MSELoss: 0.0203292635367497
+Masked MSE: 0.04404243582271432
+Masked MSE, reg.: 0.052515113378237735
+PBL Mean: 1.2491951843625622
+PBL Max: 29.7879304986251
+PBL L2: 22.909276814209786
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 16/100 done!🦾 Train step: 12160
+----------------------------------------
+MSELoss: 0.01930205648715951
+Masked MSE: 0.04207099403597807
+Masked MSE, reg.: 0.04998858178426561
+PBL Mean: 1.218560897990277
+PBL Max: 29.091364376168503
+PBL L2: 22.370416327526694
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.021216482789639165
+Masked MSE, reg.: 0.02480764099780251
+MSELoss: 0.009466266308856362
+PBL Mean: 0.5483868809307323
+PBL Max: 10.428193069906795
+PBL L2: 9.885345436544979
+Inference speed (per batch): 0.011226747153148822
+
+NEW BEST VAL ERROR 0.0212 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 17/100 done!🦾 Train step: 12920
+----------------------------------------
+MSELoss: 0.018304338494903948
+Masked MSE: 0.04000972041272019
+Masked MSE, reg.: 0.04746136819257548
+PBL Mean: 1.1900922201181714
+PBL Max: 28.460893588317067
+PBL L2: 21.764204705388924
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 18/100 done!🦾 Train step: 13680
+----------------------------------------
+MSELoss: 0.017578988392396192
+Masked MSE: 0.038634056044056224
+Masked MSE, reg.: 0.0456855106755699
+PBL Mean: 1.1634958552686792
+PBL Max: 27.937820819804543
+PBL L2: 21.3245597387615
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.021992863648954558
+Masked MSE, reg.: 0.025124591369839275
+MSELoss: 0.009418773053980926
+PBL Mean: 0.5096833243089564
+PBL Max: 8.879517936706543
+PBL L2: 8.92499849656049
+Inference speed (per batch): 0.013057132694281309
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 19/100 done!🦾 Train step: 14440
+----------------------------------------
+MSELoss: 0.016942423783046636
+Masked MSE: 0.03739512489716473
+Masked MSE, reg.: 0.04411119818197269
+PBL Mean: 1.140745755716374
+PBL Max: 27.23042698157461
+PBL L2: 20.898845898477656
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 20/100 done!🦾 Train step: 15200
+----------------------------------------
+MSELoss: 0.01631745628424381
+Masked MSE: 0.03610542771945659
+Masked MSE, reg.: 0.04252889844049749
+PBL Mean: 1.1192514598369598
+PBL Max: 27.071442535049037
+PBL L2: 20.52439026330647
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.017377608992597635
+Masked MSE, reg.: 0.019952447405632803
+MSELoss: 0.007509095298455042
+PBL Mean: 0.514531345577801
+PBL Max: 11.292343442580279
+PBL L2: 9.708602501364314
+Inference speed (per batch): 0.012885587940143202
+
+NEW BEST VAL ERROR 0.0174 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 21/100 done!🦾 Train step: 15960
+----------------------------------------
+MSELoss: 0.015476255768321847
+Masked MSE: 0.03419593639034582
+Masked MSE, reg.: 0.04031235185500823
+PBL Mean: 1.1000068352410668
+PBL Max: 26.89288844309355
+PBL L2: 20.16793653337579
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 22/100 done!🦾 Train step: 16720
+----------------------------------------
+MSELoss: 0.015152138290240577
+Masked MSE: 0.03365745896865663
+Masked MSE, reg.: 0.039556936880475596
+PBL Mean: 1.083045861438701
+PBL Max: 26.17092604135212
+PBL L2: 19.90540146074797
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.01595316723208217
+Masked MSE, reg.: 0.018196443282067775
+MSELoss: 0.0068132398156997035
+PBL Mean: 0.49055096086333777
+PBL Max: 10.822364958594827
+PBL L2: 8.972116604973289
+Inference speed (per batch): 0.011356968270368216
+
+NEW BEST VAL ERROR 0.016 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 23/100 done!🦾 Train step: 17480
+----------------------------------------
+MSELoss: 0.014399165163846
+Masked MSE: 0.031910894095505536
+Masked MSE, reg.: 0.037554194871336224
+PBL Mean: 1.0696386523936925
+PBL Max: 26.8871811603245
+PBL L2: 19.746109816902564
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 24/100 done!🦾 Train step: 18240
+----------------------------------------
+MSELoss: 0.013922779293926922
+Masked MSE: 0.030872396367455
+Masked MSE, reg.: 0.03632036714422467
+PBL Mean: 1.0573800029723268
+PBL Max: 28.974654467482317
+PBL L2: 19.623722623523914
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.015751190472613363
+Masked MSE, reg.: 0.017980807921027436
+MSELoss: 0.00673680835239151
+PBL Mean: 0.46251840100568886
+PBL Max: 21.86594114864574
+PBL L2: 8.371249922584084
+Inference speed (per batch): 0.010560911858406411
+
+NEW BEST VAL ERROR 0.0158 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 25/100 done!🦾 Train step: 19000
+----------------------------------------
+MSELoss: 0.013412894454392555
+Masked MSE: 0.0297217948901418
+Masked MSE, reg.: 0.03498023908928429
+PBL Mean: 1.0391452820677507
+PBL Max: 30.553407857292576
+PBL L2: 19.26587865729081
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 26/100 done!🦾 Train step: 19760
+----------------------------------------
+MSELoss: 0.012936379906329277
+Masked MSE: 0.028613514543854093
+Masked MSE, reg.: 0.033711327109976034
+PBL Mean: 1.0278868500339358
+PBL Max: 30.676085129537082
+PBL L2: 19.068024354231984
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.015266982148237088
+Masked MSE, reg.: 0.01732741398188998
+MSELoss: 0.006462615273673745
+PBL Mean: 0.44858420736649457
+PBL Max: 23.58852061103372
+PBL L2: 8.078601758620318
+Inference speed (per batch): 0.011834292328635724
+
+NEW BEST VAL ERROR 0.0153 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 27/100 done!🦾 Train step: 20520
+----------------------------------------
+MSELoss: 0.012422274839819262
+Masked MSE: 0.0273892722901349
+Masked MSE, reg.: 0.03232804832391833
+PBL Mean: 1.015180300803561
+PBL Max: 30.45290618444744
+PBL L2: 18.829127856304773
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 28/100 done!🦾 Train step: 21280
+----------------------------------------
+MSELoss: 0.012283142592365804
+Masked MSE: 0.027233835870988276
+Masked MSE, reg.: 0.032041631942909016
+PBL Mean: 1.0027808092142407
+PBL Max: 29.632420652791073
+PBL L2: 18.601723394895856
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.013316701768952258
+Masked MSE, reg.: 0.015142561692525359
+MSELoss: 0.005656140533221119
+PBL Mean: 0.45154236169422374
+PBL Max: 21.162098733116597
+PBL L2: 8.47946450289558
+Inference speed (per batch): 0.012203856882885757
+
+NEW BEST VAL ERROR 0.0133 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 29/100 done!🦾 Train step: 22040
+----------------------------------------
+MSELoss: 0.011758341679447575
+Masked MSE: 0.02591208649407092
+Masked MSE, reg.: 0.030593555802969557
+PBL Mean: 0.9889733474505575
+PBL Max: 27.992989891453792
+PBL L2: 18.271984584707962
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 30/100 done!🦾 Train step: 22800
+----------------------------------------
+MSELoss: 0.011398396008696996
+Masked MSE: 0.025103462504615124
+Masked MSE, reg.: 0.02964932528618527
+PBL Mean: 0.9760544202829662
+PBL Max: 26.174289902887846
+PBL L2: 17.979521405069452
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.011211348083965919
+Masked MSE, reg.: 0.013004802890560207
+MSELoss: 0.004932752547456938
+PBL Mean: 0.4356177287943223
+PBL Max: 16.43225160486558
+PBL L2: 7.874397833207074
+Inference speed (per batch): 0.01251326491816572
+
+NEW BEST VAL ERROR 0.0112 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 31/100 done!🦾 Train step: 23560
+----------------------------------------
+MSELoss: 0.011082600309562526
+Masked MSE: 0.024377548738725874
+Masked MSE, reg.: 0.028812674849637246
+PBL Mean: 0.9643858850786561
+PBL Max: 25.25291952584919
+PBL L2: 17.720392476884943
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 32/100 done!🦾 Train step: 24320
+----------------------------------------
+MSELoss: 0.010816798192497932
+Masked MSE: 0.02380581870430002
+Masked MSE, reg.: 0.02812810662741724
+PBL Mean: 0.9505227659877978
+PBL Max: 24.019429152890254
+PBL L2: 17.389461913861727
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.014043056186945999
+Masked MSE, reg.: 0.015783481902497655
+MSELoss: 0.005841302619699169
+PBL Mean: 0.42509659388486076
+PBL Max: 10.892826091541963
+PBL L2: 7.822501513537238
+Inference speed (per batch): 0.00909441988213289
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 33/100 done!🦾 Train step: 25080
+----------------------------------------
+MSELoss: 0.010610176277297892
+Masked MSE: 0.02335629241884147
+Masked MSE, reg.: 0.027593410769967658
+PBL Mean: 0.9398950470121283
+PBL Max: 23.49661962609542
+PBL L2: 17.18340031724227
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 34/100 done!🦾 Train step: 25840
+----------------------------------------
+MSELoss: 0.010392052669225162
+Masked MSE: 0.022875649111933613
+Masked MSE, reg.: 0.027025903538359625
+PBL Mean: 0.9290387771631542
+PBL Max: 22.967349737568906
+PBL L2: 16.93385820137827
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.010976243413546506
+Masked MSE, reg.: 0.0126505857662243
+MSELoss: 0.004774975968415246
+PBL Mean: 0.4240484809174257
+PBL Max: 8.642808891745174
+PBL L2: 7.68710464589736
+Inference speed (per batch): 0.008334024751778035
+
+NEW BEST VAL ERROR 0.011 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 35/100 done!🦾 Train step: 26600
+----------------------------------------
+MSELoss: 0.01016424902665772
+Masked MSE: 0.022383191799254794
+Masked MSE, reg.: 0.02643796950333605
+PBL Mean: 0.9180695837265567
+PBL Max: 22.80822085079394
+PBL L2: 16.69700258656552
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 36/100 done!🦾 Train step: 27360
+----------------------------------------
+MSELoss: 0.009974687050194725
+Masked MSE: 0.021963201392147885
+Masked MSE, reg.: 0.025943631374914396
+PBL Mean: 0.9080622862044133
+PBL Max: 22.365214406816584
+PBL L2: 16.4789397164395
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.01101898744921474
+Masked MSE, reg.: 0.012429728501421563
+MSELoss: 0.004613489843904972
+PBL Mean: 0.3984236307003919
+PBL Max: 7.3122234793270335
+PBL L2: 7.017217636108398
+Inference speed (per batch): 0.009670205812675275
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 37/100 done!🦾 Train step: 28120
+----------------------------------------
+MSELoss: 0.009817799579009022
+Masked MSE: 0.021644475061054293
+Masked MSE, reg.: 0.025548936997687347
+PBL Mean: 0.8996098505823236
+PBL Max: 22.88237416995199
+PBL L2: 16.329639151221826
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 38/100 done!🦾 Train step: 28880
+----------------------------------------
+MSELoss: 0.00959477096759273
+Masked MSE: 0.0211579250294323
+Masked MSE, reg.: 0.02497111893455057
+PBL Mean: 0.8911745442371619
+PBL Max: 21.763958196890982
+PBL L2: 16.14173966708936
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.00945406374795472
+Masked MSE, reg.: 0.010870902634718838
+MSELoss: 0.0040959137437098165
+PBL Mean: 0.4043685537927291
+PBL Max: 8.799450184317196
+PBL L2: 7.4968338966369625
+Inference speed (per batch): 0.008731422435341621
+
+NEW BEST VAL ERROR 0.00945 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 39/100 done!🦾 Train step: 29640
+----------------------------------------
+MSELoss: 0.009294073536722479
+Masked MSE: 0.02041458157381337
+Masked MSE, reg.: 0.024148401095973035
+PBL Mean: 0.8846512267464086
+PBL Max: 22.097084923794394
+PBL L2: 16.026608460827877
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 40/100 done!🦾 Train step: 30400
+----------------------------------------
+MSELoss: 0.009200737651094403
+Masked MSE: 0.020249007468258865
+Masked MSE, reg.: 0.023925610271429545
+PBL Mean: 0.8759561308904698
+PBL Max: 21.2325859822725
+PBL L2: 15.835202505714015
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.007645158803857425
+Masked MSE, reg.: 0.008893304772894172
+MSELoss: 0.0033804836217314004
+PBL Mean: 0.39098586650455697
+PBL Max: 8.940436963474049
+PBL L2: 7.261920328701244
+Inference speed (per batch): 0.0078104299768764415
+
+NEW BEST VAL ERROR 0.00765 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 41/100 done!🦾 Train step: 31160
+----------------------------------------
+MSELoss: 0.009047807269656148
+Masked MSE: 0.019920182327347758
+Masked MSE, reg.: 0.02353180211870686
+PBL Mean: 0.8693674022429868
+PBL Max: 21.331431988665933
+PBL L2: 15.722733240378531
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 42/100 done!🦾 Train step: 31920
+----------------------------------------
+MSELoss: 0.008834893910802508
+Masked MSE: 0.01941386069244656
+Masked MSE, reg.: 0.022959271239999093
+PBL Mean: 0.8624715671727532
+PBL Max: 21.659188522790608
+PBL L2: 15.612441291307148
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.010292652698562426
+Masked MSE, reg.: 0.011501336612683885
+MSELoss: 0.0042366734651081706
+PBL Mean: 0.38184292176190543
+PBL Max: 7.628078309227439
+PBL L2: 6.990538159538718
+Inference speed (per batch): 0.006075316694606205
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 43/100 done!🦾 Train step: 32680
+----------------------------------------
+MSELoss: 0.008788586120537826
+Masked MSE: 0.019353431694846795
+Masked MSE, reg.: 0.02285959514985351
+PBL Mean: 0.855041829222127
+PBL Max: 21.40895299911499
+PBL L2: 15.469970905153374
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 44/100 done!🦾 Train step: 33440
+----------------------------------------
+MSELoss: 0.008674900964098542
+Masked MSE: 0.019134753340806224
+Masked MSE, reg.: 0.022579728174758586
+PBL Mean: 0.8498790709595931
+PBL Max: 21.427126679922406
+PBL L2: 15.386703374511317
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.009338111616671085
+Masked MSE, reg.: 0.010543597884037916
+MSELoss: 0.00391636135549668
+PBL Mean: 0.3778781968004563
+PBL Max: 8.824759943345013
+PBL L2: 6.955333389955409
+Inference speed (per batch): 0.006130600235466023
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 45/100 done!🦾 Train step: 34200
+----------------------------------------
+MSELoss: 0.008592621066092857
+Masked MSE: 0.018944226577877997
+Masked MSE, reg.: 0.022361044933725344
+PBL Mean: 0.8434101071012647
+PBL Max: 20.86225914076755
+PBL L2: 15.245692383615594
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 46/100 done!🦾 Train step: 34960
+----------------------------------------
+MSELoss: 0.008331894138705378
+Masked MSE: 0.018311082764136555
+Masked MSE, reg.: 0.021653382671310714
+PBL Mean: 0.836020901799202
+PBL Max: 20.71808184071591
+PBL L2: 15.101350552157351
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.008253737073391675
+Masked MSE, reg.: 0.009505660169045714
+MSELoss: 0.0035858611001030488
+PBL Mean: 0.37660664004438066
+PBL Max: 8.041430024539723
+PBL L2: 6.7703796274521775
+Inference speed (per batch): 0.006201681599657818
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 47/100 done!🦾 Train step: 35720
+----------------------------------------
+MSELoss: 0.008309994310165119
+Masked MSE: 0.018295898227217167
+Masked MSE, reg.: 0.02161294055220328
+PBL Mean: 0.8321100615357098
+PBL Max: 21.01169758721402
+PBL L2: 15.058922073715612
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 48/100 done!🦾 Train step: 36480
+----------------------------------------
+MSELoss: 0.008072789529902175
+Masked MSE: 0.01774191395379603
+Masked MSE, reg.: 0.020980141363351752
+PBL Mean: 0.8264790049508999
+PBL Max: 20.79923651092931
+PBL L2: 14.946052606482255
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.010042026397936485
+Masked MSE, reg.: 0.011130580875803443
+MSELoss: 0.004073045085019925
+PBL Mean: 0.3695092337972978
+PBL Max: 8.032347813774559
+PBL L2: 6.622684697543874
+Inference speed (per batch): 0.006055104000295293
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 49/100 done!🦾 Train step: 37240
+----------------------------------------
+MSELoss: 0.007991230042994414
+Masked MSE: 0.01755438996478915
+Masked MSE, reg.: 0.02076404004994976
+PBL Mean: 0.8203489927869094
+PBL Max: 21.133859793763413
+PBL L2: 14.84462130948117
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 50/100 done!🦾 Train step: 38000
+----------------------------------------
+MSELoss: 0.007986352984842501
+Masked MSE: 0.017595042127772773
+Masked MSE, reg.: 0.020777050609161195
+PBL Mean: 0.8140302935713216
+PBL Max: 20.43501434702622
+PBL L2: 14.705264785415247
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.007480005415923455
+Masked MSE, reg.: 0.008497515123556641
+MSELoss: 0.003171674923642593
+PBL Mean: 0.36426598885480094
+PBL Max: 7.59928877213422
+PBL L2: 6.547399818196016
+Inference speed (per batch): 0.006610808540854658
+
+NEW BEST VAL ERROR 0.00748 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 51/100 done!🦾 Train step: 38760
+----------------------------------------
+MSELoss: 0.007815923364710455
+Masked MSE: 0.017201295754823244
+Masked MSE, reg.: 0.020324532959708257
+PBL Mean: 0.8104877227231075
+PBL Max: 19.765928416503105
+PBL L2: 14.650359080967151
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 52/100 done!🦾 Train step: 39520
+----------------------------------------
+MSELoss: 0.007758777804280582
+Masked MSE: 0.017096890380459005
+Masked MSE, reg.: 0.02018661187030375
+PBL Mean: 0.8056041504207411
+PBL Max: 20.193319737283808
+PBL L2: 14.545876915831315
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.006063628782901694
+Masked MSE, reg.: 0.007119124908657635
+MSELoss: 0.002724873710095006
+PBL Mean: 0.3553364904487834
+PBL Max: 7.568749035105986
+PBL L2: 6.303857584560618
+Inference speed (per batch): 0.005924422918435405
+
+NEW BEST VAL ERROR 0.00606 FOUND!!🥳 
+Model has best validation performance yet.
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 53/100 done!🦾 Train step: 40280
+----------------------------------------
+MSELoss: 0.007607743097469211
+Masked MSE: 0.016728904121555387
+Masked MSE, reg.: 0.0197760666965654
+PBL Mean: 0.8018333779353845
+PBL Max: 20.395224976539613
+PBL L2: 14.507806583454734
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 54/100 done!🦾 Train step: 41040
+----------------------------------------
+MSELoss: 0.007467872807510981
+Masked MSE: 0.01638886322831049
+Masked MSE, reg.: 0.0193962408646353
+PBL Mean: 0.7969264115942152
+PBL Max: 19.657582497596742
+PBL L2: 14.41265272215793
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.007157755692434662
+Masked MSE, reg.: 0.008226220956181779
+MSELoss: 0.003098228751846096
+PBL Mean: 0.3438357637209051
+PBL Max: 7.2317423203412226
+PBL L2: 5.971458496766932
+Inference speed (per batch): 0.0063458896824158725
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 55/100 done!🦾 Train step: 41800
+----------------------------------------
+MSELoss: 0.007476002019584963
+Masked MSE: 0.01649121817593512
+Masked MSE, reg.: 0.01945961212959925
+PBL Mean: 0.7927159373697482
+PBL Max: 20.235458720357794
+PBL L2: 14.353800964355468
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 56/100 done!🦾 Train step: 42560
+----------------------------------------
+MSELoss: 0.007349100297218875
+Masked MSE: 0.01615098635298445
+Masked MSE, reg.: 0.01909914359474849
+PBL Mean: 0.7883338071013751
+PBL Max: 19.909537641625654
+PBL L2: 14.253393765499718
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.010557381162310349
+Masked MSE, reg.: 0.011501192082377041
+MSELoss: 0.004148334308582194
+PBL Mean: 0.36413910038330977
+PBL Max: 8.0937577864703
+PBL L2: 6.657807669920079
+Inference speed (per batch): 0.006434507094501682
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 57/100 done!🦾 Train step: 43320
+----------------------------------------
+MSELoss: 0.007271342042000278
+Masked MSE: 0.01601711617120983
+Masked MSE, reg.: 0.018915571180466367
+PBL Mean: 0.7841080792640385
+PBL Max: 20.0757623986194
+PBL L2: 14.191290025962026
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 58/100 done!🦾 Train step: 44080
+----------------------------------------
+MSELoss: 0.007214670339109082
+Masked MSE: 0.015892368559970668
+Masked MSE, reg.: 0.018768189760464196
+PBL Mean: 0.7796468421032554
+PBL Max: 20.2896231826983
+PBL L2: 14.11593422764226
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.006127812773646677
+Masked MSE, reg.: 0.00710274036425878
+MSELoss: 0.002692555942956139
+PBL Mean: 0.33708462048979365
+PBL Max: 6.428781778672162
+PBL L2: 5.829895025141099
+Inference speed (per batch): 0.00619092021130628
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 59/100 done!🦾 Train step: 44840
+----------------------------------------
+MSELoss: 0.007066121668628368
+Masked MSE: 0.015531164292540206
+Masked MSE, reg.: 0.018364764655646133
+PBL Mean: 0.7759319144644236
+PBL Max: 19.55432840272
+PBL L2: 14.038760170183684
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 60/100 done!🦾 Train step: 45600
+----------------------------------------
+MSELoss: 0.0071097589949587064
+Masked MSE: 0.01570107661751344
+Masked MSE, reg.: 0.018515176818657077
+PBL Mean: 0.7721351457269569
+PBL Max: 19.492001541037308
+PBL L2: 13.958065765782406
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.008060807312893516
+Masked MSE, reg.: 0.008976287290673046
+MSELoss: 0.0032972557305851404
+PBL Mean: 0.3443171616862802
+PBL Max: 6.474710935704849
+PBL L2: 6.155913768095129
+Inference speed (per batch): 0.0064561834228430495
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 61/100 done!🦾 Train step: 46360
+----------------------------------------
+MSELoss: 0.006970825457430788
+Masked MSE: 0.01533549116115625
+Masked MSE, reg.: 0.01812398378786288
+PBL Mean: 0.7684156460197349
+PBL Max: 19.318640710178176
+PBL L2: 13.892535435525994
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 62/100 done!🦾 Train step: 47120
+----------------------------------------
+MSELoss: 0.006873496994376183
+Masked MSE: 0.01509596441970452
+Masked MSE, reg.: 0.017858227713670776
+PBL Mean: 0.7646727719589284
+PBL Max: 19.83508812251844
+PBL L2: 13.834165963373685
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.011143509484827518
+Masked MSE, reg.: 0.012100356554283815
+MSELoss: 0.004352401172303978
+PBL Mean: 0.32793386999298546
+PBL Max: 5.82291464805603
+PBL L2: 5.653214611726649
+Inference speed (per batch): 0.006443402294398231
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 63/100 done!🦾 Train step: 47880
+----------------------------------------
+MSELoss: 0.006862367768649404
+Masked MSE: 0.015137995115334266
+Masked MSE, reg.: 0.017862549245259478
+PBL Mean: 0.7606221161390606
+PBL Max: 18.73590923234036
+PBL L2: 13.734850150660465
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 64/100 done!🦾 Train step: 48640
+----------------------------------------
+MSELoss: 0.006677356774698159
+Masked MSE: 0.014654900013518176
+Masked MSE, reg.: 0.017343485188719473
+PBL Mean: 0.7587425268794361
+PBL Max: 19.28073256141261
+PBL L2: 13.720673380400005
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.007722467408679864
+Masked MSE, reg.: 0.008756165463915642
+MSELoss: 0.0032632878187167295
+PBL Mean: 0.339956113170175
+PBL Max: 6.329832907284008
+PBL L2: 6.093210186677821
+Inference speed (per batch): 0.006244139035526827
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 65/100 done!🦾 Train step: 49400
+----------------------------------------
+MSELoss: 0.006725942973341597
+Masked MSE: 0.014826450044730384
+Masked MSE, reg.: 0.01750213956019204
+PBL Mean: 0.7543855760442583
+PBL Max: 19.292588526324224
+PBL L2: 13.647600669609872
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 66/100 done!🦾 Train step: 50160
+----------------------------------------
+MSELoss: 0.006622593632384546
+Masked MSE: 0.014582765501874841
+Masked MSE, reg.: 0.017225273268444367
+PBL Mean: 0.7515929930304226
+PBL Max: 19.006176401439465
+PBL L2: 13.583953925182945
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.00921627395950696
+Masked MSE, reg.: 0.010086931814165676
+MSELoss: 0.0036525298622162904
+PBL Mean: 0.32375689780010897
+PBL Max: 6.15965256690979
+PBL L2: 5.6912876521839815
+Inference speed (per batch): 0.006536711871911607
+
+CONTINUE TRAINING!🦿
+
+
+
+Epoch 67/100 done!🦾 Train step: 50920
+----------------------------------------
+MSELoss: 0.006520741336709378
+Masked MSE: 0.014329333538434616
+Masked MSE, reg.: 0.01694577879909622
+PBL Mean: 0.7489205985477096
+PBL Max: 18.785772388859797
+PBL L2: 13.53742992250543
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Epoch 68/100 done!🦾 Train step: 51680
+----------------------------------------
+MSELoss: 0.006522737844773617
+Masked MSE: 0.014365993861697223
+Masked MSE, reg.: 0.016967103652361978
+PBL Mean: 0.7466160066817936
+PBL Max: 19.21205166766518
+PBL L2: 13.511159269433273
+
+Max GPU memory reserved: 0.8GB
+
+
+Current GPU memory reserved: 0.8GB
+
+
+
+Time to check validation error...🔍
+
+
+Validation dataset 1 errors 👀
+------------------------------
+Masked MSE: 0.006484950941932552
+Masked MSE, reg.: 0.007395538063172032
+MSELoss: 0.00276870836284669
+PBL Mean: 0.3230506865417256
+PBL Max: 5.404688565871295
+PBL L2: 5.4970368048724
+Inference speed (per batch): 0.006571406000362271
+
+CONTINUE TRAINING!🦿
+
+
+Best point was more than 15 epochs/train steps ago!
+
+## Early stop triggered...
+
+TRAINING FINISHED!!🧠
+Calculating final validation error...
+
+
+Time to check validation error...🔍
+
+
+
+---------------------------- Results Summary 😎 ----------------------------
+
+Training error
+------------------
+MSELoss: 0.0077588
+Masked MSE: 0.017097
+Masked MSE, reg.: 0.020187
+PBL Mean: 0.8056
+PBL Max: 20.193
+PBL L2: 14.546
+
+Validation error(s)
+--------------------
+		Masked MSE	Masked MSE, re	MSELoss       	PBL Mean       	PBL Max       	PBL L2       	Inference spee	
+Val set 1	0.0060636		0.0071191		0.0027249		0.35534		7.5687		6.3039		0.0059244		
+
+Best epoch: 52
+Training finished in 11884.87 seconds.
+
+Script took 14035.296947956085 seconds to run.
+Closing lab...😺 Goodbye!
