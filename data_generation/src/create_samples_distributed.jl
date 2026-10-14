@@ -6,6 +6,8 @@
 #   - Added arguments to dist_create_samples for perturbations considered in PFDelta
 #   - Modified the code so that now there are two samplers to avoid iddle time by processors
 #   - Changed return statement to return polytope for analysis
+# Case500 migration changes (2026-10-14): keep and join all distributed tasks;
+# drain outstanding queues during shutdown before reusing workers for a new batch.
 
 using Distributed
 """
@@ -30,7 +32,7 @@ function dist_create_samples(net::String, K=Inf; U=0.0, S=0.0, V=0.0, max_iter=I
 							  save_certs=save_certs, save_max_load=save_max_load,
 							  print_level=print_level, stat_track=stat_track, save_while=save_while,
 							  save_infeasible=save_infeasible, save_path=save_path, net_path=net_path,
-							  model_type=model_type, r_solver=r_solver, opf_solver=opf_solver, returnAnb=false,
+							  model_type=model_type, r_solver=r_solver, opf_solver=opf_solver, returnAnb=returnAnb,
 							  perturb_topology_method=perturb_topology_method, perturb_costs_method=perturb_costs_method, starting_k=starting_k)
 end
 
@@ -103,7 +105,7 @@ function dist_create_samples(net::Dict, K=Inf; U=0.0, S=0.0, V=0.0, max_iter=Inf
 	result_ch = Distributed.RemoteChannel(()->result_chnl, pid)
 	final_ch = Distributed.RemoteChannel(()->final_chnl, pid)
 	support_ch = Distributed.RemoteChannel(()->support_chnl, pid)
-	procs = Distributed.workers()
+	procs = Distributed.workers()[1:(nproc - 1)]
 
 	num_procs = nproc - 2  #TASK: Determine why the producer gets stuck running on the main proc
 
@@ -127,8 +129,10 @@ function dist_create_samples(net::Dict, K=Inf; U=0.0, S=0.0, V=0.0, max_iter=Inf
 																		 reset_level, print_level)
 	
 	(print_level > 0) && println("Starting sampling...")
+	support_futures = Distributed.Future[]
+	processor_futures = Distributed.Future[]
 	for proc in support_procs
-		support_producers = Distributed.remotecall(sample_support, proc, support_ch, sampler, sample_ch, final_ch)
+		push!(support_futures, Distributed.remotecall(sample_support, proc, support_ch, sampler, sample_ch, final_ch))
 	end
 	producer = Distributed.remotecall(sample_producer, producer_proc,
 						  A, b, sampler, sampler_opts, base_load_feasible, K, U, S, V, max_iter, T, num_procs, 
@@ -136,13 +140,96 @@ function dist_create_samples(net::Dict, K=Inf; U=0.0, S=0.0, V=0.0, max_iter=Inf
 						  stat_track, save_certs, net_name, dual_vars, save_order, replace_samples,
 						  save_path, sample_ch, polytope_ch, result_ch, final_ch, print_level, starting_k, support_ch)
 	for proc in processor_procs
-		a = Distributed.remotecall(sample_processor, proc, net, net_r, r_solver, opf_solver,
+		push!(processor_futures, Distributed.remotecall(sample_processor, proc, net, net_r, r_solver, opf_solver,
 							   sample_ch, final_ch, polytope_ch, result_ch, perturb_topology_method, 
-							   perturb_costs_method, print_level, model_type)
+							   perturb_costs_method, print_level, model_type))
 	end
 
-	results = Distributed.fetch(producer)
-	println(Dates.format(Dates.now(), "HH.MM.SS"), ": ", "Results fetched!!")
+	# A worker exception must fail the batch, rather than leaving the producer
+	# waiting forever for a result that can no longer arrive.
+	all_worker_futures = vcat(processor_futures, support_futures)
+	check_ready_workers() = foreach(f -> isready(f) ? fetch(f) : nothing, all_worker_futures)
+	try
+		while !isready(producer)
+			check_ready_workers()
+			if isready(final_ch)
+				# DONE publication itself can wait for queue space. Unblock final
+				# result/certificate publishers before waiting for producer return.
+				for ch in (result_ch, polytope_ch)
+					while isready(ch)
+						take!(ch)
+					end
+				end
+				if all(isready, processor_futures)
+					# With no remaining sample consumers this drain cannot race take!.
+					while isready(sample_ch)
+						take!(sample_ch)
+					end
+				end
+			end
+			sleep(0.05)
+		end
+		results = Distributed.fetch(producer)
+		# Producer has signalled DONE, but processors can still be completing an OPF
+		# or blocked publishing their final result/certificate. Do not consume sample
+		# DONE sentinels until every processor has exited: some are blocked in take!.
+		while any(f -> !isready(f), processor_futures)
+			check_ready_workers()
+			while isready(result_ch)
+				take!(result_ch)
+			end
+			while isready(polytope_ch)
+				take!(polytope_ch)
+			end
+			sleep(0.05)
+		end
+		# A support sampler can have a put! already in flight when DONE is set.
+		# Draining now is safe because no processor remains blocked in take!.
+		while any(f -> !isready(f), support_futures)
+			check_ready_workers()
+			# Preserve support_ch DONE: the support task may still be blocked in take!.
+			for ch in (sample_ch, result_ch, polytope_ch)
+				while isready(ch)
+					take!(ch)
+				end
+			end
+			sleep(0.05)
+		end
+		# Fetch every Future even on an exception, then report all remote failures.
+		worker_errors = Any[]
+		for future in vcat(processor_futures, support_futures)
+			try
+				fetch(future)
+			catch err
+				push!(worker_errors, err)
+			end
+		end
+		for ch in (sample_ch, support_ch, result_ch, polytope_ch, final_ch)
+			close(ch)
+		end
+		isempty(worker_errors) || throw(CompositeException(worker_errors))
+	catch err
+		# These workers belong to this generation process. A failed batch cannot
+		# safely reuse them, because other tasks may be blocked in remote channels.
+		# Stop all batch workers and propagate the original error; the caller must
+		# restart from its last committed journal, rather than continue silently.
+		# Release remote requests before terminating their workers; otherwise
+		# closing a channel later can try to reply to an already closed socket.
+		for ch in (sample_ch, support_ch, result_ch, polytope_ch, final_ch)
+			try
+				close(ch)
+			catch
+			end
+		end
+		sleep(0.1)
+		try
+			Distributed.rmprocs(procs...; waitfor=10)
+		catch stop_err
+			@error "Could not stop all failed-batch workers within 10 seconds" exception=stop_err
+		end
+		rethrow()
+	end
+	println(Dates.format(Dates.now(), "HH.MM.SS"), ": ", "Results fetched; all batch workers joined.")
 
 	# Need to convert the unique active sets Set to and Array, due to a bug with PyJulia
 	results["duals"]["unique_active_sets"] = collect(results["duals"]["unique_active_sets"])

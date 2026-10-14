@@ -2,6 +2,109 @@
 
 using Graphs: SimpleGraph, add_edge!, is_connected
 
+function branch_sort_key(net, key)
+    return get(net["branch"][key], "index", parse(Int, string(key)))
+end
+
+function loop_branch_keys(net)
+    branch_keys = sort(collect(keys(net["branch"])), by=k -> branch_sort_key(net, k))
+    loop_keys = []
+
+    for key in branch_keys
+        branch = net["branch"][key]
+        get(branch, "br_status", 1) == 1 || continue
+
+        candidate = deepcopy(net)
+        candidate["branch"][key]["br_status"] = 0
+        if is_graph_connected(candidate)
+            push!(loop_keys, key)
+        end
+    end
+
+    return loop_keys
+end
+
+function ensure_branch_rho_base!(branch)
+    base_fields = [
+        ("br_r", "br_r_base"),
+        ("br_x", "br_x_base"),
+        ("g_fr", "g_fr_base"),
+        ("b_fr", "b_fr_base"),
+        ("g_to", "g_to_base"),
+        ("b_to", "b_to_base"),
+        ("br_status", "br_status_base"),
+    ]
+
+    for (field, base_field) in base_fields
+        if !haskey(branch, base_field)
+            branch[base_field] = branch[field]
+        end
+    end
+end
+
+function initialize_branch_rhos!(net; default_rho=1.0)
+    for branch in values(net["branch"])
+        ensure_branch_rho_base!(branch)
+        branch["rho"] = default_rho
+        branch["rho_controlled"] = false
+        branch["br_status"] = branch["br_status_base"]
+        branch["br_r"] = branch["br_r_base"]
+        branch["br_x"] = branch["br_x_base"]
+        branch["g_fr"] = branch["g_fr_base"]
+        branch["b_fr"] = branch["b_fr_base"]
+        branch["g_to"] = branch["g_to_base"]
+        branch["b_to"] = branch["b_to_base"]
+    end
+end
+
+function apply_branch_rho!(net, branch_id, rho)
+    @assert 0.0 <= rho <= 1.0 "rho must be in [0, 1]"
+
+    initialize_branch_rhos!(net)
+
+    branch_key = string(branch_id)
+    @assert haskey(net["branch"], branch_key) "Branch $(branch_key) not found"
+
+    branch = net["branch"][branch_key]
+    ensure_branch_rho_base!(branch)
+    @assert branch["br_status_base"] == 1 "Branch $(branch_key) is inactive in the base network"
+
+    branch["rho"] = rho
+    branch["rho_controlled"] = true
+
+    if rho == 0.0
+        branch["br_status"] = 0
+        branch["br_r"] = branch["br_r_base"]
+        branch["br_x"] = branch["br_x_base"]
+        branch["g_fr"] = branch["g_fr_base"]
+        branch["b_fr"] = branch["b_fr_base"]
+        branch["g_to"] = branch["g_to_base"]
+        branch["b_to"] = branch["b_to_base"]
+    else
+        branch["br_status"] = 1
+        branch["br_r"] = branch["br_r_base"] / rho
+        branch["br_x"] = branch["br_x_base"] / rho
+        branch["g_fr"] = branch["g_fr_base"] * rho
+        branch["b_fr"] = branch["b_fr_base"] * rho
+        branch["g_to"] = branch["g_to_base"] * rho
+        branch["b_to"] = branch["b_to_base"] * rho
+    end
+
+    return Dict(
+        "branch_id" => branch_key,
+        "rho" => rho,
+        "f_bus" => branch["f_bus"],
+        "t_bus" => branch["t_bus"],
+        "br_status" => branch["br_status"],
+        "br_r_base" => branch["br_r_base"],
+        "br_x_base" => branch["br_x_base"],
+        "g_fr_base" => branch["g_fr_base"],
+        "b_fr_base" => branch["b_fr_base"],
+        "g_to_base" => branch["g_to_base"],
+        "b_to_base" => branch["b_to_base"],
+    )
+end
+
 function perturb_topology!(net; method="none") 
     branch_keys = collect(keys(net["branch"]))
     gen_keys = collect(keys(net["gen"]))
@@ -201,4 +304,3 @@ function sample_ball(center::Vector{Float64}, r::Float64)
     sample = center .+ radius .* z
     return sample
 end
-

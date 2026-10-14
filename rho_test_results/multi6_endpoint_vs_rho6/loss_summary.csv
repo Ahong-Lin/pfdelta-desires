@@ -1,4 +1,0 @@
-model,series,final_epoch,final_loss,min_loss
-endpoint-common,train,300,3.021257774781842e-05,3.021257774781842e-05
-rho6-common,train,300,4.527667318312502e-06,4.527456593173266e-06
-endpoint-budget,train,300,6.231059486703e-06,6.23065634485789e-06

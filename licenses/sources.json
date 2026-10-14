@@ -1,0 +1,23 @@
+[
+  {
+    "file": "licenses/LICENSE",
+    "source": "PFDelta repository root LICENSE (local reference)",
+    "source_url": null,
+    "retrieved_utc_date": null,
+    "sha256": "e3950fbf309428cca5e584247392d4df38bdcf7f50611e117d1f433bb08cd6dc"
+  },
+  {
+    "file": "licenses/LICENSE-OPFLearn",
+    "source": "OPFLearn original license",
+    "source_url": "https://raw.githubusercontent.com/NREL/OPFLearn.jl/main/LICENSE",
+    "retrieved_utc_date": "2026-10-14",
+    "sha256": "7ffebb661c9450279fa83a24bd56b4ad8e506ad28688e4e04d363688c2f05c73"
+  },
+  {
+    "file": "licenses/LICENSE-CC-BY-4.0.txt",
+    "source": "Creative Commons official license",
+    "source_url": "https://creativecommons.org/licenses/by/4.0/legalcode.txt",
+    "retrieved_utc_date": "2026-10-14",
+    "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+  }
+]

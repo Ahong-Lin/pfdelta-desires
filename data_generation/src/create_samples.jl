@@ -198,7 +198,9 @@ function create_samples(net::Dict, K=Inf; U=0.0, S=0.0, V=0.0, max_iter=Inf, T=I
         else
 			save_infeasible && store_infeasible_sample(infeasible_AC_inputs, x, result, 
 							save_while, net_name, now_str, save_order, dual_vars, save_path)
-			w = store_infeasible_sample_json(w, net_perturbed, results_pfdelta, save_path)
+			if save_infeasible
+				w = store_infeasible_sample_json(w, net_perturbed, results_pfdelta, save_path)
+			end
             px = x[1:Integer(length(x)/2)]
             qx = x[Integer(length(x)/2) + 1:end]
 
@@ -256,7 +258,9 @@ function create_samples(net::Dict, K=Inf; U=0.0, S=0.0, V=0.0, max_iter=Inf, T=I
                 else
 					save_infeasible && store_infeasible_sample(infeasible_AC_inputs, x, result, 
 								    save_while, net_name, now_str, save_order, dual_vars, save_path)
-					w = store_infeasible_sample_json(w, net_perturbed, results_pfdelta, save_path)
+					if save_infeasible
+						w = store_infeasible_sample_json(w, net_perturbed, results_pfdelta, save_path)
+					end
 				end
 			end
 		end

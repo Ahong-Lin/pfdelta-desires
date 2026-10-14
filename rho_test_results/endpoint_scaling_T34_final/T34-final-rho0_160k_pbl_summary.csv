@@ -1,2 +1,0 @@
-run_dir,model,seed,split,num_samples,rho_counts,PBL Mean,PBL Max,PBL L2,Relative PBL Mean,Relative PBL Mean / Max Load,Inference speed (per batch)
-runs/canos_case30_rho_scaling_endpoint_160k/canos_case30_rho_scaling_endpoint_160k_ep300_260801_103758,canos_pf,11,test,6800,"{""0"": 6800}",0.004499363361255211,0.35259321331977844,0.03291579018620884,0.03503800944370382,0.00837806501371019,0.9417921453714371

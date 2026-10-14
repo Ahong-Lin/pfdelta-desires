@@ -6,6 +6,9 @@
 #   - Implemented a new function that allows for two processors doing sampling
 #   - Added a cap on the sizes of the polytope
 #   - Added PFDelta's network perturbations to cost and topology
+# Case500 migration changes (2026-10-14): report infeasible attempts too,
+# so the producer can replenish its queue instead of silently exhausting it.
+# Use one dedicated support sampler to avoid competing isready/take! races.
 
 # Functions used to give workers tasks for distributed processing
 
@@ -17,6 +20,8 @@ function sample_batch(A, b, x0, num_samples, sampler_opts, sample_ch, done_ch, s
 	new_samples = sampler(A, b, x0, num_samples; sampler_opts...)
 	if !isready(done_ch)
 		for sample in eachcol(new_samples)
+			# DONE can arrive while a support batch is being published.
+			isready(done_ch) && return
 			put!(sample_ch, sample)
 		end
 		println(Dates.format(Dates.now(), "dd HH.MM.SS"), ": ", "Batch produced")
@@ -27,15 +32,10 @@ function sample_support(support_ch, sampler, sample_ch, done_ch)
 	println(Dates.format(Dates.now(), "dd HH.MM.SS"), ": SUPPORT SAMPLER STARTED")
 	while !isready(done_ch)
 		println(Dates.format(Dates.now(), "dd HH.MM.SS"), ": Waiting for next batch...")
-		if !isready(support_ch)
-			put!(support_ch, "Empty")
-			println("Anti blocking flag put!")
-			sleep(10)
-			continue
-		end
+		# The support sampler is the sole consumer; DONE releases its take!.
 		out = take!(support_ch)
 		if typeof(out) == String
-			println("Anti blocking flag found: ", out)
+			out == "DONE FLAG" && return
 			continue
 		end
 		A, b, x0, num_samples, sampler_opts = out
@@ -92,17 +92,7 @@ function sample_producer(A, b, sampler, sampler_opts::Dict, base_load_feasible,
 	end
 	total_count = 4*num_procs
 
-	# Produce them
-	while isready(support_ch)
-		out = take!(support_ch)
-		if typeof(out) == String
-			println("Anti blocking flag found")
-			break
-		end
-		A, b, x0, num_samples, sampler_opt = out
-		println(Dates.format(Dates.now(), "dd HH.MM.SS"), ": Sample being produced!")
-		sample_batch(A, b, x0, num_samples, sampler_opts, sample_ch, final_ch, sampler)
-	end
+	# Only the dedicated support sampler consumes support_ch.
 	println(Dates.format(Dates.now(), "dd HH.MM.SS"), ": ", "Initial sample done!")
 
 	k = starting_k  # Count of feasible samples collected
@@ -244,17 +234,7 @@ function sample_producer(A, b, sampler, sampler_opts::Dict, base_load_feasible,
 				println(Dates.format(Dates.now(), "dd HH.MM.SS"), ": Sample put in supp. $num_new_samples left!")
 			end
 
-			# Produce them
-			while isready(support_ch)
-				out = take!(support_ch)
-				if typeof(out) == String
-					println("Anti blocking flag found")
-					break
-				end
-				A, b, x0, num_samples, sampler_opts = out
-				println(Dates.format(Dates.now(), "dd HH.MM.SS"), ": Sample being produced!")
-				sample_batch(A, b, x0, num_samples, sampler_opts, sample_ch, final_ch, sampler)
-			end
+			# The dedicated support sampler owns this queue throughout the batch.
 			println(Dates.format(Dates.now(), "dd HH.MM.SS"), ": ", "Sampling done!")
 		end
 		GC.gc()
@@ -263,15 +243,8 @@ function sample_producer(A, b, sampler, sampler_opts::Dict, base_load_feasible,
 
 	# Put results objects into the final channel pipeline to get returned
 	put!(final_ch, "DONE FLAG")
-	println(Dates.format(Dates.now(), "dd HH.MM.SS"), ": ", "Draining sample channel")
-	while isready(sample_ch)
-		take!(sample_ch)
-		println(Dates.format(Dates.now(), "dd HH.MM.SS"), ": ", "Sample thrown")
-	end
-	while isready(support_ch)
-		take!(support_ch)
-		println(Dates.format(Dates.now(), "dd HH.MM.SS"), ": ", "PreSample thrown")
-	end
+	# The coordinator drains sample_ch only after all processors have exited.
+	# Concurrent isready/take! drains here can race other consumers and block.
 	put!(support_ch, "DONE FLAG")
 	println(Dates.format(Dates.now(), "dd HH.MM.SS"), ": ", "Flooding sample channel with done")
 	for _ in 1:num_procs
@@ -409,9 +382,9 @@ function sample_processor(net, net_r, r_solver, opf_solver,
 		end
 		# Puts OPF results to the results channel to be processed by main thread
 		iter_elapsed_time = time() - iter_start_time
-		if feasible
-			put!(result_ch, (x, result, feasible, new_cert, iter_elapsed_time, results_pfdelta, net_perturbed))
-		end
+		# Every consumed sample needs a response, including an unsuccessful OPF.
+		# The producer increments its replenishment count for every response.
+		put!(result_ch, (x, result, feasible, new_cert, iter_elapsed_time, results_pfdelta, net_perturbed))
 		println(Dates.format(Dates.now(), "dd HH.MM.SS"), ": ", "Put sample in result_ch")
 		results_pfdelta = nothing
 		result = nothing

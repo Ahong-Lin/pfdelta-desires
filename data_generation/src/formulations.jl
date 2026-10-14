@@ -251,12 +251,14 @@ function find_max_loads(pm; print_level=0, nw=NW_DEFAULT, min_load=0.0,
 		load_bus = loads[load_idx]["load_bus"]
 		pd_max[load_idx] = JuMP.objective_value(model)
 		
-		println("\nLoad Bus: ", load_bus, "\n", JuMP.solution_summary(model))
+		if print_level > 1
+			println("\nLoad Bus: ", load_bus, "\nTermination status: ", JuMP.termination_status(model))
+		end
 		
 		# Check if solution was found & no errors occured
 		status = JuMP.termination_status(model)
 		solved = status in SOLVED_STATUSES
-		append!(solved_statuses, solved)
+		push!(solved_statuses, solved)
 		!solved && @warn "Load $(load) max load solution is $(status)"
 	end
 	return pd_max, solved_statuses
@@ -310,7 +312,7 @@ function find_nearest_feasible(pm, px, qx; nw=NW_DEFAULT, print_level=0)
 	QD_vals = JuMP.value.(model[:qd]).data
 
 	if print_level > 1
-		println(JuMP.solution_summary(model))
+		println("Termination status: ", JuMP.termination_status(model))
 	end
 	
 	# Check if solution was found & no errors occured

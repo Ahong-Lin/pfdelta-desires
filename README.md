@@ -1,228 +1,125 @@
-__Note (March 26, 2026):__ We were notified of a bug in the training loss function of CANOS PF (in particular, the method `constraint_violations_loss_pf` located in  `core/utils/pf_losses_utils.py`. The bug incorrectly calculates reactive power mismatch and line branch flow mismatch. The bug has been fixed.
+# case500 端点数据生成迁移包
 
-# PFΔ Dataset
+本文件夹可单独上传到 Linux 服务器。目标是复用 case118 的 **OPFLearn 负荷采样 → 定制 ACOPF 父工况 → 固定输入的普通 AC-PF 端点标签**流程；此次只生成 `ρ=1,0`。不含旧数据、模型、账号信息或训练任务，不生成 `ρ=0.5`，也不使用 CPF 扩展。
 
-PFΔ is a benchmark dataset for power flow that captures diverse variations in load, generation, and topology. It contains 859,800 solved power flow instances spanning six different bus system sizes, capturing three types of contingency scenarios (N, N-1, and N-2), and including close-to-infeasible cases near steady-state voltage stability limits. Our dataset is available at: https://huggingface.co/datasets/pfdelta/pfdelta/tree/main. Our paper is available at: https://arxiv.org/abs/2510.22048. 
+## 1. 默认数量
 
-# Dataset Overview
+采用随包提供的 `pglib_opf_case500_goc.m`。500 个母线、733 条支路，其中 728 条在运；排除变压器、断开后造成孤岛的线路，得到 **502 条可停运线路**。单位变比的变压器也排除，不能只用 `tap == 1` 判断普通线路。
 
-The dataset includes solved power flow instance for the following power systems tests cases: IEEE 14-bus, IEEE 30-bus, IEEE 57-bus, IEEE 118-bus, GOC 500-bus, and GOC 2000-bus. For test case we provide multiple topological configurations:
-- N: original (unperturbed) topology
-- N-1: single-component outage scenarios
-- N-2: double-component outage scenarios
+这里有两种统计口径：如果只要求“断开这条在运支路后全网仍连通”，共有 **582 条**（728 条在运支路减去 146 条桥）。其中含 **80 条变压器支路**，所以本包当前用于生成的普通线路为 `582 − 80 = 502` 条。当前数量表与配置仍采用 502 条；582 条是包含可断变压器的连通性统计。
 
+该文件原始参考母线 311 的机组处于停运状态。PowerModels 会校正母线类型；本包另把替代参考母线的选择固定为“最大在运机组，容量相同取最小机组编号”，在此 case 中为 **312 号母线**，并写入 `plan.json`。这样不会因无序字典遍历导致不同服务器选出不同参考母线。
 
-For each test case, we include solved power flow instances produced through our data generation workflow (see **Figure 1**), as well as approaching infeasible and close-to-infeasible samples produced through continuation power flow.
+| 集合 | 独立父工况 | 端点记录 |
+|---|---:|---:|
+| 最大训练集 | 160,000 | 320,000 |
+| 固定验证集：每条线路 50 个父工况 | 25,100 | 50,200 |
+| 固定测试集：每条线路 50 个父工况 | 25,100 | 50,200 |
+| 总计 | **210,200** | **420,400** |
 
-<p align="center" style="background-color:white; padding:10px;">
-  <img src="figures/data_generation.png" alt="Data Generation Pipeline" width="700"/>
-</p>
+一个父工况对应一个选定的停运线路以及两条配对端点记录，`ρ=1` 为原线路在运，`ρ=0` 为该线路停运。`10k` 等数字指**端点记录**，所以 `10k` 包含 5,000 个父工况。
 
-<p align="center"><b>Figure 1.</b> Data generation pipeline.</p>
+嵌套训练规模为：`10k / 20k / 40k / 45k / 50k / 55k / 60k / 80k / 90k / 100k / 110k / 120k / 160k / 320k`。每个规模每条线路的父工况数最多相差 1；不足整除时余数按固定线路顺序分配。验证、测试各固定一套，不随训练规模变化。模型随机种子 `11,22,33,44,55` 是未来训练时使用的种子，此包的生成/划分种子独立固定。
 
-The following Tables summarize the amount of samples provided for each test case: 
-<p align="center" style="background-color:white; padding:10px;">
-  <img src="figures/train_samples_table.png" alt="Training Samples Table" width="700"/>
-</p>
+## 2. 上传后运行
 
-<p align="center">
-  <b>Table 1.</b> Number of training samples generated for each network topology and system size.
-</p>
+先选择服务器上的**持久磁盘路径**。下面 `/data/...` 只是示例，请换成你实际有写权限、退出或重启后仍保留的目录。生成主要使用 CPU 和内存，不需要 CUDA 或显卡；以前“每卡 3 个任务”的安排属于模型训练。
 
-<p align="center" style="background-color:white; padding:10px;">
-  <img src="figures/test_samples_table.png" alt="Test Samples Table" width="700"/>
-</p>
+需要 Python **3.10 或 3.11**、Julia **1.9.4**；后台运行另需 `tmux`。Python 依赖在 `requirements.txt`，Julia 依赖在 `data_generation/Project.toml` 和 `Manifest.toml`，不能只安装 pip 依赖。
 
-<p align="center">
-  <b>Table 2.</b> Number of test samples generated for each network topology and system size.
-</p>
-
-# Standardized Evaluation Tasks
-
-We provide a set of standardized evaluation tasks to evaluate in- and out-of-distribution performance, data efficiency, and performance on close-to-infeasible cases. The summary of all evaluation tasks is shown in the following table:
-
-<p align="center" style="background-color:white; padding:10px;">
-  <img src="figures/tasks_table.png" alt="Test Samples Table" width="700"/>
-</p>
-
-<p align="center">
-  <b>Table 3.</b> Standardized evaluation tasks included for PFΔ.
-</p>
-
-Each task defines a specific evaluation setting, but any of the provided datasets can be used with these tasks to benchmark model performance under different conditions.  The only exception is the GOC 2000-bus system due to the limited number of available samples.
-
-
-# PFΔ Usage Guide 
-
-### Requirements 
---------------------
-
-The Python packages required to use the PFΔ dataset and reproduce the paper's results are listed in `requirements.txt`. Install them with:
-```bash
-pip install -r requirements.txt
-```
-
-If you want to use the data generation framework or verify power flow solutions, install the Julia packages listed in `data_generation/Project.toml`:
-```bash
-julia --project=data_generation -e 'using Pkg; Pkg.instantiate()'
-```
-
-**Note:** Julia dependencies are only required for data generation and validation. They are not needed to load and use the pre-generated dataset.
-
-### Dataset Class Usage 
---------------------
-
-The `PFDeltaDataset` class can be instantiated to automatically download and load the dataset from Hugging Face.  
-It handles fetching the data, verifying its integrity, and organizing samples for direct use in training or evaluation.  
-
-For example, the dataset for **Task 1.3** using the **IEEE 118-bus system** can be created with the following Python script:
-
-```python
-from core.datasets.pfdelta_dataset import PFDeltaDataset
-
-dataset = PFDeltaDataset(
-    case_name="case118",
-    task=1.3,
-    root_dir="data"
-)
-```
-We provide several notebooks to serve as a quick start guide to using the `PFDeltaDataset` `InMemoryDataset` and visualizing/analyzing our generated data: 
-
-- [Learn how to download and work with `PFDeltaDataset` for your model](notebooks/dataset_quickstart_guide.ipynb): this notebook includes information on how to automatically download and unzip data from the HuggingFace repository and inherit the parent class for custom model data preprocessing. 
-- [Visualize data diversity compared to other benchmark datasets](notebooks/violin_plots.ipynb): This notebook allows you to visualize the spread of various features in our dataset in comparison to existing benchmark datasets. 
-- [Visualize continuation power flow samples](notebooks/plots_julia.ipynb): This notebook allows you to visualize the condition number and the voltage at a given bus as a function of the continuation parameters. 
-- [Validate the N-1 and N-2 contingencies and power balance satisfaction of our dataset](dataset_report.py): This marimo notebook allows you to run comprehensive tests on our dataset to validate its characteristics. To launch the notebook, **run the following command from the repository root**:
-
-  ```bash
-  marimo edit notebooks/dataset_report.py
-
-#### HeteroData Structure 
-
-We provide a PyTorch `InMemoryDataset` class called `PFDeltaDataset` to load the raw data described in Appendix A.6. This dataset class is designed to support loading data for a specified task for with a given bus system size. Each raw data instance that we load is stored as a JSON file representing the power flow solution for a specific grid configuration. An example of what a HeteroData instance for this dataset looks like is provided below: 
-
-
-    HeteroData(
-      bus={
-        x=[14, 2],
-        y=[14, 2],
-        bus_gen=[14, 2],
-        bus_demand=[14, 2],
-        bus_voltages=[14, 2],
-        bus_type=[14],
-        shunt=[14, 2],
-        limits=[14, 2],
-      },
-      gen={
-        limits=[5, 4],
-        generation=[5, 2],
-        slack_gen=[5],
-      },
-      load={ demand=[11, 2] },
-      (bus, branch, bus)={
-        edge_index=[2, 20],
-        edge_attr=[20, 8],
-        edge_label=[20, 4],
-        edge_limits=[20, 1],
-      },
-      (gen, gen_link, bus)={ edge_index=[2, 5] },
-      (bus, gen_link, gen)={ edge_index=[2, 5] },
-      (load, load_link, bus)={ edge_index=[2, 11] },
-      (bus, load_link, load)={ edge_index=[2, 11] }
-    )
-
-
-#### Directory Structure 
-
-Once data from the Hugging Face repository is extracted, it will be organized as follows. It includes per-topology subfolders (n, n-1, n-2, etc.), each containing raw JSON samples, near-feasibility subsets (nose and around_nose), and model-specific processed tensors for training and evaluation. A top-level processed/ directory also provides combined, ready-to-use datasets across all topologies/task-relevant feasibilities for convenience. An example of what this directory structure would look like is provided below:
-
-```markdown
-pfdelta_data/
-└── case57/
-    ├── n-1/
-    │   ├── raw/
-    │   │   ├── sample1.json
-    │   │   ├── sample2.json
-    │   │   └── ...
-    │   ├── processed/
-    │   │   ├── task_1.3_feasible_{MODELNAME}/
-    │   │   │   ├── train.pt
-    │   │   │   └── test.pt
-    │   │   ├── task_1.3_nearly_infeasible_{MODELNAME}/
-    │   │   └── ...
-    │   ├── nose/
-    │   │   ├── train/
-    │   │   │   ├── sample_1_nose.json
-    │   │   │   ├── sample_2_nose.json
-    │   │   │   └── ...
-    │   │   └── test/
-    │   │       ├── sample_1_nose.json
-    │   │       ├── sample_2_nose.json
-    │   │       └── ...
-    │   └── around_nose/
-    │       └── train/
-    │           ├── sample_1_lam_0p1.json
-    │           ├── sample_2_lam_0p2.json
-    │           └── ...
-    ├── n/
-    ├── n-2/
-    └── ...
-└── processed/
-    └── combined_task_1.3_{MODELNAME}/
-        ├── train.pt
-        └── test.pt
-```
-
-### Results Replication
---------------------
-
-To replicate the results presented in the paper, use the configuration files located in `core/configs/`.  Each YAML file corresponds to a specific model–task combination and follows the naming convention:
-
-where  
-- `{modelname}` ∈ [`pfnet`, `canos_pf`, `canos_opf`, ...]  
-- `{tasknumber}` ∈ [`1.1`, `1.2`, `1.3`, ...]  
-
-The models can be located in `core/models`.
-
-For example, the following command retrains **PowerFlowNet** on **Task 1.3**:
+迁移时上传代码压缩包，在目标服务器重新执行环境安装。不要把另一台机器的 `.venv/` 当作可直接复用的运行环境。`PYTHON_BIN` 只用于选择安装时创建虚拟环境的基础 Python；`run.sh` 始终使用本包 `.venv/bin/python`，避免绕过已安装依赖的环境。
 
 ```bash
-python main.py --config pfnet_task_1_3
+cd /你的上传目录/case500_migration
+
+# 如果已有 Julia 1.9.4，可跳过这一行；安装器只支持 Linux x86_64
+bash scripts/install_julia.sh
+
+# 如果 python3 不是 3.10/3.11，先指定正确路径，例如：
+# export PYTHON_BIN=/你的conda环境/bin/python
+# 如果使用已有 Julia：export JULIA_BIN=/你的julia-1.9.4/bin/julia
+bash setup_env.sh
+
+# 只查看实际网络和生成数量，不生成数据
+bash run.sh plan
+
+# 小规模全流程：4条线路，每条2训练+1验证+1测试父工况，共32端点
+bash run.sh smoke /data/case500_smoke
+
+# 小试成功并检查磁盘预算后，启动完整生成与划分
+bash start_tmux.sh /data/case500_endpoint_320k case500_generate
+tmux attach -t case500_generate
 ```
-Additionally, a config file verifying the correct re-implementation of CANOS is included. Running any configuration file will automatically create a runs/ directory containing experiment outputs (e.g., runs/canos_pf_task_1_1_<YYMMDD_HHMMSS>). Its structure is as follows:
 
-```bash 
-runs/
-└── modelname_task_#_#_<YYMMDD_HHMMSS>/
-    ├── config.yaml         # Model and training hyperparameters
-    ├── model.pt            # Trained model weights
-    ├── out.txt             # Console log of training
-    ├── summary.json        # Summary of training and validation losses
-    ├── train.json          # Training loss per epoch
-    └── val.json            # Validation loss every 2 epochs
-``` 
+离开 tmux 而不中断任务：**按 Ctrl+b，松开，再按 d**。
 
-The summary.json file can be used to quickly compare performance against the values reported in the paper. Note that the paper’s results are test-set errors averaged over three different random seeds, whereas the results in summary.json reflect validation losses from a single training run. As a result, minor discrepancies between the two are expected. 
+```bash
+# 查看已提交进度（无需读取数十万原始文件）
+bash run.sh status /data/case500_endpoint_320k
 
-In addition, we provide quick-start notebooks for training models and designing custom loss functions: 
-- [Calculating Test Errors and Performing Model Inference](notebooks/julia_code_results.ipynb): COMING SOON
-- [Designing Custom Loss Functions](notebooks/julia_code_results.ipynb): COMING SOON
+# 中断后恢复：使用同一配置、同一输出目录、同一worker数量
+bash run.sh full /data/case500_endpoint_320k
 
-### Notes:
-------
-- All values are in per-unit (p.u.).
-- All JSON files are compatible with PowerModels.jl for loading, solving, or further analysis.
-
-
-### Citation:
-------
-If you use any of our model implementations, data generation code, dataset class, or benchmark, please consider citing us: 
+# 重新核对冻结划分与全部端点元数据
+bash run.sh verify /data/case500_endpoint_320k
 ```
-@inproceedings{
-rivera2025pf,
-title={{PF}\ensuremath{\Delta}: A Benchmark Dataset for Power Flow under Load, Generation, and Topology Variations},
-author={Ana K. Rivera and Anvita Bhagavathula and Alvaro Carbonero and Priya L. Donti},
-booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
-year={2025},
-url={https://openreview.net/forum?id=Gi1HtsTAkv}
-}
+
+默认 4 个 Julia worker，另有主进程；并行源生成分配生产、支持和 ACOPF 求解角色，并不等于 4 个 worker 全都在解 ACOPF。可在首次运行前修改 `config.json` 的 `workers`，或使用 `--workers 8`，后续恢复必须保持一致。BLAS 每进程 1 线程，防止线程数成倍膨胀。小试目录和正式目录必须分开。
+
+随机种子与版本会记录，但并行任务完成顺序、数值库和硬件可能影响全新生成的数据，不承诺只凭同一种子在不同服务器逐位重建同一母库。已经生成并冻结的数据可以连同目录迁移、校验和复用；journal 支持进程中断后恢复，不声称提供突然断电下的完整事务保证。
+
+首次启动会加载/编译 Julia 包，并求 OPFLearn 的最大负荷边界；500 母线情况下这一步可能明显慢于后续批次。日志停在初始化不等于已经开始生成 420,400 条记录。每批最多尝试 6,400 次、采样阶段限时 7,200 秒；单次 Ipopt CPU 限时 120 秒。初始边界计算和进程通信不属于采样阶段计时，程序不承诺精确的总墙钟超时。
+
+## 3. 每个配对样本怎样得到
+
+1. 固定 case500 原始拓扑，OPFLearn 在其采样区域内生成需求向量，并打乱发电成本，通过 PFΔ 定制 ACOPF 得到配套的运行设定。这一阶段不独立生成 N−1 优化解。
+2. 将父工况的各母线 `Pd,Qd`、PV 母线的给定 `Pg,Vm`、Slack 的给定 `Vm,Va` 固定。保留多机母线，并在母线聚合层面核验有功输入。
+3. 对指定线路分别建立 `ρ=1` 和 `ρ=0` 网络；两者都从 ACOPF 解提供的初始电压出发，调用 `PowerModels.compute_ac_pf`，显式指定 `NLsolve method=:newton`、解析 Jacobian、`BackTracking` 线搜索。不使用 NLsolve 默认 trust-region，也不在失败时拿 ACOPF 解替代标签。
+4. 两端均收敛后，独立重算包含变压器、支路充电和并联元件的 AC 功率平衡，要求最大节点有功/无功残差不超过 `1e-7 p.u.`，固定控制量误差不超过 `1e-8`，电压有限且为正。支路功率由电压按原方程重算。
+5. 同一对始终一起接受或拒绝。失败原因记录在尝试日志中；缺额仍补该线路，不暗中换成容易求解的线路。达到候选预算仍有线路缺额时停止并报出缺额，需要分析原因后另定方案。
+
+**收敛的牛顿解不是动态稳定性证明，也不是两端严格处在同一解分支的证明。** 此包提供“同一已知运行输入、同一种显式牛顿求解协议”的配对标签，符合当前启发式实验；未来添加中间 `ρ` 或连续追踪可复用父工况 ID 和输入指纹。
+
+PFΔ 的定制 ACOPF 与普通 PF 不等同于严格遵守原始设备限额的调度。此版不继承 case118 的特定节点剔除规则，也没有未经确认加上统一电压窗口；低电压/设备超限标签仍可能存在。数值审计通过只说明潮流方程与固定控制量一致。小试不用于估计极端工况比例，正式生成后的分布报告用于下一轮筛选讨论。
+
+## 4. 划分与复用
+
+先生成统一母库，再以**父工况**为单位，按线路与输入模式做分层划分。输入特征是按母线排列的 `Pd,Qd,PV-Pg,PV/Slack-Vm设定,Slack-Va设定,母线类型`；不使用预测误差，也不依据 PQ 待求电压选测试题。近似重复模式可落在不同集合，完全相同的已知输入指纹不可跨集合。
+
+聚类仅辅助数据集分层，不作为神经网络输入变换；其参数允许利用待划分母库的已知输入，但不接触求解标签。该方法改善普通 ID 评测的分布可比性，**不能保证 10k 等小规模见过每个联合模式，也不能证明 OOD 消失**。报告会记录各线路数量、聚类比例和集合重合情况。首次划分后冻结索引和哈希，再运行校验时不重抽题。
+
+两个端点的 JSON 保持 PFΔ 的 `network / solution / rho_meta` 结构，split 索引使用相对路径。此包还没有接入并运行旧 CANOS-PF 训练脚本；训练缓存转换与模型适配属于下一步。
+
+```text
+case500_endpoint_320k/
+  raw/                       每个端点一个JSON
+  plan.json                  线路、配额、生成协议
+  generation_config.json     固定配置和求解器版本
+  state.json                 已提交进度/各线路缺额
+  sampling_state.json        OPFLearn采样区域检查点
+  sampler/                   最大负荷等初始化结果
+  journal/                   批次提交记录，支持中断恢复
+  manifests/parents.jsonl    父工况、配对文件、输入指纹和特征
+  manifests/attempts.jsonl   接受/拒绝记录
+  splits/                    固定val/test、14个嵌套train索引及审计
+  logs/                      tmux启动日志
 ```
+
+默认在一批端点及采样状态成功提交后删除该批临时 ACOPF 源 JSON；其 SHA256 和父工况固定输入保留于最终数据。设 `keep_sources=true` 可以保留源文件，会额外占磁盘。断点恢复以 journal 为准；不要手工删改 journal、raw 或 sampler。
+
+32 条小试结束会生成 `storage_estimate.json`，按实际文件大小估算完整 raw 数据磁盘占用。这不包含 JSON 特征清单、约 2.35 GiB 的浮点输入矩阵、索引、未来训练图缓存等，必须预留额外空间。不要因为代码包很小就把输出放在小系统盘。
+
+## 5. 文件与验证
+
+- `config.json`：规模、随机种子、CPU 并行度、源生成预算。
+- `setup_env.sh` / `requirements.txt`：可重复的依赖安装。
+- `run.sh` / `start_tmux.sh`：预览、小试、完整生成、恢复、审计。
+- `data_generation/`：锁定的 Julia 环境、case500 网络、源采样和端点求解。
+- `scripts/split_dataset.py`：分层、嵌套、父工况隔离、冻结划分。
+- `scripts/inspect_case.py`：无需额外 Python 包即可查看网络数量和生成目标。
+- `VALIDATION.md`：本地实际检查结果与尚未完成的运行验证。
+- `THIRD_PARTY_NOTICES.md` / `licenses/`：上游来源、修改和许可证。
+
+无 Julia 时，可先运行：`python3 scripts/inspect_case.py`。它只核查 MATPOWER 网络结构，最终生成仍使用 PowerModels 解析。
+
+Julia 安装包及校验和来源：[Julia 官方历史版本页](https://julialang.org/downloads/oldreleases/)。这里固定 1.9.4 是为了复用已有 Julia 锁文件，而非自动跟随最新版。安装时需要访问 Julia/Python 软件源；环境目录不会打进迁移包。

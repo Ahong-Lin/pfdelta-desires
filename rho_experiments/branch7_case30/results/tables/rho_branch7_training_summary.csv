@@ -1,4 +1,0 @@
-Experiment,Run dir,Train metric,Epochs,Best epoch,Initial train loss,Final train loss,Min train loss
-60L-80R,/home/linhanjiang/pfdelta-main/runs/canos_case30_rho_branch7_60L80R/canos_case30_rho_branch7_60L80R_ep300_260714_055918,canos_pf_mse+pf_constraint_violation,300,30,4.076179828643799,0.0004211385109617064,0.0004204304147666941
-80L-60R,/home/linhanjiang/pfdelta-main/runs/canos_case30_rho_branch7_80L60R/canos_case30_rho_branch7_80L60R_ep300_260714_060130,canos_pf_mse+pf_constraint_violation,300,180,4.091694399913152,0.0004692662487893055,0.0004692662487893055
-100L-48R,/home/linhanjiang/pfdelta-main/runs/canos_case30_rho_branch7_100L48R/canos_case30_rho_branch7_100L48R_ep300_260714_060133,canos_pf_mse+pf_constraint_violation,300,100,4.108449466228485,0.0006622791988775134,0.000662026711118718

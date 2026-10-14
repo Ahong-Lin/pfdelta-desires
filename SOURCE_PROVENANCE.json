@@ -1,0 +1,70 @@
+{
+  "bundle": "case500_migration",
+  "prepared_date": "2026-10-14",
+  "source_policy": "Local audited PFDelta/case118 generation snapshot; source/ reference files were not edited. Current bundle hashes are in SHA256SUMS.",
+  "vendor_files": {
+    "data_generation/src/OPFLearn.jl": {
+      "baseline_snapshot": "server_audit_20261009/snapshot/data_generation/src/OPFLearn.jl",
+      "baseline_sha256": "fb810aea1c7fae7e3bd93229113c97e64840c46bd356de19a0ccd4abecd82230"
+    },
+    "data_generation/src/build_opf_pfdelta.jl": {
+      "baseline_snapshot": "server_audit_20261011/provenance_snapshot/data_generation/src/build_opf_pfdelta.jl",
+      "baseline_sha256": "20b55d16cb6b1d4cd478996c65f81a603f7a67bfbbf1f3e2a5b5e7786ade2714"
+    },
+    "data_generation/src/create_samples.jl": {
+      "baseline_snapshot": "server_audit_20261011/provenance_snapshot/data_generation/src/create_samples.jl",
+      "baseline_sha256": "46078ba27a66193b256f91483b33520bfe36c1c5b54b3c73d42854848c025dd1"
+    },
+    "data_generation/src/create_samples_distributed.jl": {
+      "baseline_snapshot": "server_audit_20261011/provenance_snapshot/data_generation/src/create_samples_distributed.jl",
+      "baseline_sha256": "02f3db089383762492fe254ac452f024564251166d226eed948ddf7611b5b425"
+    },
+    "data_generation/src/create_seed_samples.jl": {
+      "baseline_snapshot": "server_audit_20261009/snapshot/data_generation/src/create_seed_samples.jl",
+      "baseline_sha256": "9d316dd0df277b0e6026d8e74c665911a67770da26f55c7590c1675d9919d57e"
+    },
+    "data_generation/src/export.jl": {
+      "baseline_snapshot": "server_audit_20261009/snapshot/data_generation/src/export.jl",
+      "baseline_sha256": "4883fe7b643f8e88e93e36abfd1886730d44b2f25c90029ff83a4a860354b9f1"
+    },
+    "data_generation/src/formulations.jl": {
+      "baseline_snapshot": "server_audit_20261009/snapshot/data_generation/src/formulations.jl",
+      "baseline_sha256": "e7f99ff92b4d040cec359944018a83a439676cf229e08d1bd0d265d0060e0e1b"
+    },
+    "data_generation/src/io.jl": {
+      "baseline_snapshot": "server_audit_20261009/snapshot/data_generation/src/io.jl",
+      "baseline_sha256": "f5e1b909cecb3395c1cf8263a8f3887003b9ce073008bff31dc9a22eed925db3"
+    },
+    "data_generation/src/network.jl": {
+      "baseline_snapshot": "server_audit_20261009/snapshot/data_generation/src/network.jl",
+      "baseline_sha256": "7421058f7f80a4bcbb8fd2935f4561d6058cbef626b2020d5f26b559daa6df88"
+    },
+    "data_generation/src/pf_delta_perturbations.jl": {
+      "baseline_snapshot": "server_audit_20261011/provenance_snapshot/data_generation/src/pf_delta_perturbations.jl",
+      "baseline_sha256": "4928bb6a4f349af91a5b534e399c2709f2bb354f11a67c4d84b67fedae65078e"
+    },
+    "data_generation/src/results.jl": {
+      "baseline_snapshot": "server_audit_20261009/snapshot/data_generation/src/results.jl",
+      "baseline_sha256": "c08d450909f43217163289fb9e664b642f237b8ab3181935408e0981a5cedc85"
+    },
+    "data_generation/src/run_ac_opf.jl": {
+      "baseline_snapshot": "server_audit_20261009/snapshot/data_generation/src/run_ac_opf.jl",
+      "baseline_sha256": "90cdf3209e68eb706cf2b194c61fb1b37aa0e640974cccaf450eae838d4eacec"
+    },
+    "data_generation/src/run_ac_opf_pfdelta.jl": {
+      "baseline_snapshot": "server_audit_20261011/provenance_snapshot/data_generation/src/run_ac_opf_pfdelta.jl",
+      "baseline_sha256": "e6caedd3646d5d83d8ec646b81ddd89481553dd10b60a17bc06d1489c9eec7df"
+    },
+    "data_generation/src/sample.jl": {
+      "baseline_snapshot": "server_audit_20261011/provenance_snapshot/data_generation/src/sample.jl",
+      "baseline_sha256": "fdcc0d13ec0bf81875929e656133a6aaeab8aacf38f47b961debe9ff9865534a"
+    },
+    "data_generation/src/tasks.jl": {
+      "baseline_snapshot": "server_audit_20261011/provenance_snapshot/data_generation/src/tasks.jl",
+      "baseline_sha256": "4be1bb93ed719be8930d7616c8d8802be9cb376907b7e5fc4cd57ac9529f25b3"
+    }
+  },
+  "network_sha256": "36c298d571605019ef16c17dd74680adca1386d91ed47d69a0d909aebc90a1b6",
+  "julia_lockfile": "data_generation/Manifest.toml",
+  "julia_version": "1.9.4"
+}

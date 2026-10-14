@@ -1,3 +1,0 @@
-run_dir,model,seed,split,num_samples,rho_counts,PBL Mean,PBL Max,PBL L2,Relative PBL Mean,Relative PBL Mean / Max Load,Inference speed (per batch)
-runs/canos_case30_rho_pf_endpoint_pfdelta_style_randomedge_unpaired_41976/canos_case30_rho_pf_endpoint_pfdelta_style_randomedge_unpaired_41976_ep300_260725_064017,canos_pf,11,test,6800,"{""1"": 6800}",0.009243317932328757,0.3146488666534424,0.06602009945056017,0.07183739690219655,0.017212804306079358,0.9776237956248224
-runs/canos_case30_rho_pf_endpoint_plus_uniformrho_extra5k_46976/canos_case30_rho_pf_endpoint_plus_uniformrho_extra5k_46976_ep300_260725_162442,canos_pf,11,test,6800,"{""1"": 6800}",0.004338337417472811,0.2219134271144867,0.03044075204169049,0.03372735948247068,0.00805381622603711,0.8248581513762474

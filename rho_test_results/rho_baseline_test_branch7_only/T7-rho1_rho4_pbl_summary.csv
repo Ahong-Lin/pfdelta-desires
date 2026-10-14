@@ -1,2 +1,0 @@
-run_dir,model,seed,split,num_samples,rho_counts,PBL Mean,PBL Max,PBL L2,Relative PBL Mean,Relative PBL Mean / Max Load,Inference speed (per batch)
-runs/canos_case30_rho_pf_branch7_B_rho4/canos_case30_rho_pf_branch7_B_rho4_ep300_260717_101746,canos_pf,11,test,2000,"{""1"": 2000}",0.004170350231230259,0.4136905372142792,0.032053152561187744,0.032385009109973904,0.007744436018168926,0.3529888791963458

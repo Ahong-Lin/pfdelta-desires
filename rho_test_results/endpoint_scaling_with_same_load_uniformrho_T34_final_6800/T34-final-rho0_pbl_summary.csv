@@ -1,3 +1,0 @@
-run_dir,model,seed,split,num_samples,rho_counts,PBL Mean,PBL Max,PBL L2,Relative PBL Mean,Relative PBL Mean / Max Load,Inference speed (per batch)
-runs/canos_case30_rho_scaling_endpoint_40k_plus_same_load_uniformrho5k/canos_case30_rho_scaling_endpoint_40k_plus_same_load_uniformrho5k_ep300_260803_162902,canos_pf,11,test,6800,"{""0"": 6800}",0.010218124895849648,0.6615964770317078,0.07538283220108817,0.07953330399358974,0.019100082849755007,8.646070275455713
-runs/canos_case30_rho_scaling_endpoint_40k_plus_same_load_uniformrho10k/canos_case30_rho_scaling_endpoint_40k_plus_same_load_uniformrho10k_ep300_260803_163045,canos_pf,11,test,6800,"{""0"": 6800}",0.008246598199886435,0.7878378033638,0.06271665939513375,0.06417111693059697,0.01533139726256623,8.609574051573873
