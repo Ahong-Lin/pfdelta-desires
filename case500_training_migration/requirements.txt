@@ -1,0 +1,6 @@
+# Python 3.11. Install torch==2.1.2+cu121 via setup_env.sh first.
+torch==2.1.2
+numpy==1.26.3
+PyYAML==6.0.3
+torch-geometric==2.6.1
+tqdm==4.67.1

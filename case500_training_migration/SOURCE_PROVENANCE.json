@@ -1,0 +1,46 @@
+{
+  "reference_run": {
+    "case": "case118",
+    "scale": "45k",
+    "seed": 44
+  },
+  "training_parameters": {
+    "epochs": 300,
+    "batch_size": 64,
+    "val_batch_size": 50,
+    "val_every": 2,
+    "lr": 0.0005,
+    "hidden_dim": 128,
+    "k_steps": 20,
+    "num_workers": 0,
+    "torch_threads": 4
+  },
+  "runtime": {
+    "python_version": "3.11.15 (main, Mar 11 2026, 17:20:07) [GCC 14.3.0]",
+    "torch_version": "2.1.2+cu121",
+    "torch_geometric_version": "2.6.1",
+    "numpy_version": "1.26.3",
+    "cuda_runtime_version": "12.1"
+  },
+  "source_sha256": {
+    "core/models/canos_pf.py": "b9cc3080479a318a7cdcb4050d0d16f494c2024940d7d8cbc63ed9d694d855c8",
+    "core/models/canos_utils.py": "8ef3325715aafc55299e4caccf391734ae049ca512653d914523460dc4ab63da",
+    "core/utils/pf_losses_utils.py": "7a6d56d2cda8af3be8630fcb2e59eb23264eb52006e937affcf5e8e8e7a67c28",
+    "scripts/endpoint_training_v2/train_endpoint_run.py": "009f1f3cfc06398a5fd3809f69b4e1e21bc28a7934cd5b97833f36dceaa88f23",
+    "scripts/endpoint_training_v2/evaluate_endpoint.py": "d57f972868fd959c10f9ba4f3ba4d4eb91b384337b844caf18e348a0aca3a81f"
+  },
+  "download_date": "2026-10-15",
+  "source_description": "liuy running case118 endpoint_training_v2; downloaded read-only",
+  "retained_core_sha256": {
+    "core/datasets/data_stats.py": "def3d197f7c64425462344adfcf3ce6c8a9928c0d2631416b120e64fcffe3a70",
+    "core/datasets/dataset_utils.py": "cfdc9121b5639f26518df46b8df8ae8a699ebec3b3400425314f50fe0710b650",
+    "core/datasets/pfdelta_dataset.py": "88c5ae437cb25a9cf37db8ff2f727ed07ef5e3d6a1e812052dbd4e95d0d20a31",
+    "core/datasets/pfdelta_rho_dataset.py": "b53c082da3e4fb84433e16bcfabb80c3414ed01529afa81a34cdf69bea9db80e",
+    "core/datasets/pfdelta_variants.py": "2cea6f6e6b83df1fb1b2cfe27a8b4ed4d3a5d282109d151a72638ee0fe57ced1",
+    "core/models/canos_pf.py": "b9cc3080479a318a7cdcb4050d0d16f494c2024940d7d8cbc63ed9d694d855c8",
+    "core/models/canos_utils.py": "8ef3325715aafc55299e4caccf391734ae049ca512653d914523460dc4ab63da",
+    "core/utils/pf_losses_utils.py": "7a6d56d2cda8af3be8630fcb2e59eb23264eb52006e937affcf5e8e8e7a67c28",
+    "core/utils/registry.py": "e74e2b075686a5c41c6335d2dec32fa29c62c40242d1c770375a1aa0c9538874"
+  },
+  "reference_scripts": "reference/liuy_endpoint_v2 (original snapshots, not case500 entrypoints)"
+}

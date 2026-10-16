@@ -1,0 +1,30 @@
+{
+  "experiment_id": "case500_endpoint_v1",
+  "case_name": "case500",
+  "scales": ["10k", "20k", "40k", "45k", "50k", "55k", "60k", "80k", "90k", "100k", "110k", "120k", "160k", "320k"],
+  "seeds": [11, 22, 33, 44, 55],
+  "epochs": 300,
+  "batch_size": 64,
+  "val_batch_size": 50,
+  "val_every": 2,
+  "lr": 0.0005,
+  "hidden_dim": 128,
+  "k_steps": 20,
+  "num_workers": 0,
+  "torch_threads": 4,
+  "device": "cuda:0",
+  "protocol": {
+    "optimizer": "Adam",
+    "weight_decay": 0.0,
+    "lr_schedule": "LinearLR(start_factor=0.01,end_factor=1,total_iters=5), then StepLR(step_size=4,gamma=0.9); milestone=5",
+    "train_loss": "CANOS_PF_MSE: MSE_PQ + MSE_PV + MSE_Slack + MSE_Branch",
+    "best_checkpoint": "minimum fixed-validation MSE",
+    "test": "evaluate best checkpoint once training finishes; full fixed test set",
+    "precision": "FP32; CUDA TF32 disabled",
+    "drop_last": false,
+    "pin_memory": false,
+    "include_sent_messages": true,
+    "holdout_parent_settings_per_eligible_line": 50,
+    "rho": [0.0, 1.0]
+  }
+}

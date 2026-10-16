@@ -1,0 +1,77 @@
+--- liuy/train_endpoint_run.py
++++ case500/train_endpoint_run.py
+@@ -1,5 +1,5 @@
+ #!/usr/bin/env python3
+-"""One resumable CANOS-PF endpoint run; launched by the nine-slot queue.
++"""One resumable CANOS-PF endpoint run; launched by the portable GPU queue.
+ 
+ The JSON config is immutable provenance. Dataset caches contain trusted local
+ PyG (data, slices) payloads. No data generation, splitting, or remote I/O occurs.
+@@ -90,7 +90,7 @@
+     return {key: value.detach().cpu().clone() for key, value in model.state_dict().items()}
+ 
+ 
+-def make_dataset_class(torch):
++def make_dataset_class(torch, case_name="case500"):
+     from torch_geometric.data import InMemoryDataset, HeteroData
+     from torch_geometric.data.separate import separate
+ 
+@@ -106,7 +106,7 @@
+                 data = data_class.from_dict(data)
+             self._data = data
+             self._data_list = None
+-            self.case_name = "case118"
++            self.case_name = case_name
+ 
+         def get(self, idx):
+             # InMemoryDataset.get normally caches one Python graph per sample.
+@@ -166,10 +166,10 @@
+     for split in ("train", "val", "test"):
+         cache = Path(config[f"{split}_cache"]).resolve()
+         datasets.append({
+-            "name": "pfdeltaRhoCANOS", "model": "CANOS", "case_name": "case118",
++            "name": "pfdeltaRhoCANOS", "model": "CANOS", "case_name": config.get("case_name", "case500"),
+             "add_bus_type": True, "root_dir": str(cache.parent),
+             "processed_subdir": ".", "split": split,
+-            "task": "case118_endpoint_training_v2",
++            "task": f"{config.get('case_name', 'case500')}_endpoint_training_v2",
+         })
+     return {
+         "config_type": "experiment", "dataset": {"datasets": datasets},
+@@ -177,7 +177,7 @@
+             "seed": config["seed"], "cpu": config.get("device", "cuda:0") == "cpu",
+             "checkpoint": True, "trainer_name": "gnn_trainer",
+             "run_location": str(config["run_dir"]),
+-            "run_name": f"canos_case118_{config['scale']}_seed{config['seed']}",
++            "run_name": f"canos_{config.get('case_name', 'case500')}_{config['scale']}_seed{config['seed']}",
+             "is_debug": False,
+         },
+         "model": {
+@@ -225,7 +225,7 @@
+         if key not in config:
+             raise ValueError(f"Missing config key: {key}")
+     if config.get("num_workers", 0) != 0:
+-        raise ValueError("This reproducible nine-slot setup requires num_workers=0")
++        raise ValueError("This preserved training protocol requires num_workers=0")
+     if smoke_steps < 0:
+         raise ValueError("smoke_steps must be non-negative")
+     cfg_hash = config_hash(config)
+@@ -309,7 +309,7 @@
+         torch.backends.cuda.matmul.allow_tf32 = False
+     torch.backends.cudnn.allow_tf32 = False
+ 
+-    CachedDataset = make_dataset_class(torch)
++    CachedDataset = make_dataset_class(torch, config.get("case_name", "case500"))
+     datasets = {}
+     component_sizes = {}
+     for split in ("train", "val"):
+@@ -537,7 +537,8 @@
+             with Path(config["parent_manifest"]).open() as handle:
+                 for line in handle:
+                     record = json.loads(line)
+-                    parent_to_line[int(record.get("load_setting_id", record["parent_id"]))] = int(record["branch_id"])
++                    parent = record["load_setting_id"] if "load_setting_id" in record else record["parent_id"]
++                    parent_to_line[int(parent)] = int(record["branch_id"])
+         test_start = time.perf_counter()
+         metrics = evaluate(
+             model, test_data, device=device, batch_size=int(config.get("val_batch_size", 50)),
