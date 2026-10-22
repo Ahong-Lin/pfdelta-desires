@@ -1,0 +1,77 @@
+config_type: experiment
+dataset:
+  datasets:
+  - name: pfdeltaRhoCANOS
+    model: CANOS
+    case_name: case118
+    add_bus_type: true
+    root_dir: /data1/liuy/linhj/pfdelta-case118-acpf/pfdelta-case118/data/case118_endpoint_training_v2/processed/45k
+    processed_subdir: .
+    split: train
+    task: case118_endpoint_training_v2
+  - name: pfdeltaRhoCANOS
+    model: CANOS
+    case_name: case118
+    add_bus_type: true
+    root_dir: /data1/liuy/linhj/pfdelta-case118-acpf/pfdelta-case118/data/case118_endpoint_id_1280k_v1_20261012/processed/canos_rho_scales/shared
+    processed_subdir: .
+    split: val
+    task: case118_endpoint_training_v2
+  - name: pfdeltaRhoCANOS
+    model: CANOS
+    case_name: case118
+    add_bus_type: true
+    root_dir: /data1/liuy/linhj/pfdelta-case118-acpf/pfdelta-case118/data/case118_endpoint_id_1280k_v1_20261012/processed/canos_rho_scales/shared
+    processed_subdir: .
+    split: test
+    task: case118_endpoint_training_v2
+functional:
+  seed: 22
+  cpu: false
+  checkpoint: true
+  trainer_name: gnn_trainer
+  run_location: /data1/liuy/linhj/pfdelta-case118-acpf/Results/0-1labels/45k/seed22
+  run_name: canos_case118_45k_seed22
+  is_debug: false
+model:
+  name: canos_pf
+  dataset: _include_
+  hidden_dim: 128
+  k_steps: 20
+  include_sent_messages: true
+optim:
+  optimizer:
+    name: Adam
+    lr: 0.0005
+    weight_decay: 0.0
+  lr_scheduler:
+    name: SequentialLR
+    milestones:
+    - 5
+    schedulers:
+    - name: LinearLR
+      start_factor: 0.01
+      end_factor: 1.0
+      total_iters: 5
+    - name: StepLR
+      step_size: 4
+      gamma: 0.9
+  train_params:
+    batch_size: 64
+    drop_last: false
+    epochs: 300
+    num_workers: 0
+    pin_memory: false
+    train_loss:
+    - name: canos_pf_mse
+  val_params:
+    batch_size: 50
+    num_workers: 0
+    pin_memory: false
+    report_every: 2
+    val_loss:
+    - name: canos_pf_mse
+provenance:
+  experiment_id: case118_endpoint_v2_20261013
+  data_hash: e028ae5e4a654e72c3ddc184c21634e48260505fc34051ada531038e9bfcbdd4
+  config_hash: 4755ef64d6c8a0dad6f53769cceef8fd6ab6e0813c1eb0f9606fce962f2f314f

@@ -1,0 +1,21 @@
+{
+  "experiment_id": "case118_endpoint_v2_20261013",
+  "config_hash": "279c190c7163d1419bb97c4c44af57ac1667242b8e81fbe893a095c58d7d14de",
+  "data_hash": "401be067b7c0e3b0552a1c6346559d7fea248f48b09ff0a61ae74ec7e497fb25",
+  "scale": "40k",
+  "seed": 22,
+  "python_version": "3.11.15 (main, Mar 11 2026, 17:20:07) [GCC 14.3.0]",
+  "torch_version": "2.1.2+cu121",
+  "torch_geometric_version": "2.6.1",
+  "numpy_version": "1.26.3",
+  "source_sha256": {
+    "/data1/liuy/linhj/pfdelta-case118-acpf/pfdelta-case118/core/models/canos_pf.py": "b9cc3080479a318a7cdcb4050d0d16f494c2024940d7d8cbc63ed9d694d855c8",
+    "/data1/liuy/linhj/pfdelta-case118-acpf/pfdelta-case118/core/models/canos_utils.py": "8ef3325715aafc55299e4caccf391734ae049ca512653d914523460dc4ab63da",
+    "/data1/liuy/linhj/pfdelta-case118-acpf/pfdelta-case118/core/utils/pf_losses_utils.py": "7a6d56d2cda8af3be8630fcb2e59eb23264eb52006e937affcf5e8e8e7a67c28",
+    "/data1/liuy/linhj/pfdelta-case118-acpf/pfdelta-case118/scripts/endpoint_training_v2/train_endpoint_run.py": "009f1f3cfc06398a5fd3809f69b4e1e21bc28a7934cd5b97833f36dceaa88f23",
+    "/data1/liuy/linhj/pfdelta-case118-acpf/pfdelta-case118/scripts/endpoint_training_v2/evaluate_endpoint.py": "d57f972868fd959c10f9ba4f3ba4d4eb91b384337b844caf18e348a0aca3a81f"
+  },
+  "cuda_visible_devices": "0",
+  "cuda_runtime_version": "12.1",
+  "recorded_at": "2026-10-12T22:00:34.906589+00:00"
+}

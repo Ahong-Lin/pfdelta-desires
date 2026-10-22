@@ -1,0 +1,3 @@
+# Preserve exported source bytes and checksum reproducibility across platforms.
+* -text
+*.csv whitespace=cr-at-eol
